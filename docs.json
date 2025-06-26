@@ -3,13 +3,19 @@
   "theme": "mint",
   "name": "FetchSERP API",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#EAB308",
+    "light": "#FBBF24",
+    "dark": "#EF4444"
   },
   "appearance": {
     "default": "dark",
     "strict": true
+  },
+  "background": {
+    "color": {
+      "light": "#ffffff",
+      "dark": "#0f172a"
+    }
   },
   "favicon": "/favicon.svg",
   "navigation": {
