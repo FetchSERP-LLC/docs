@@ -1,71 +1,81 @@
 ---
-title: Introduction
-description: "Welcome to the home of your new documentation"
+title: fetchSERP API
+description: "All-in-One SEO & Web Intelligence Toolkit API"
 ---
 
-<img
-  className="block dark:hidden"
-  src="/images/hero-light.png"
-  alt="Hero Light"
-/>
-<img
-  className="hidden dark:block"
-  src="/images/hero-dark.png"
-  alt="Hero Dark"
-/>
+# API Search Made Simple
 
-## Setting up
+Monitor keywords, track domain rankings, analyze SERPs, and extract insights — all in one powerful API for competitive research, keyword intelligence, and content strategy.
 
-The first step to world-class documentation is setting up your editing environments.
+[Get API Key](https://www.fetchserp.com) · [Go to Playground](/api-reference/introduction)
 
-<CardGroup cols={2}>
-  <Card
-    title="Edit Your Docs"
-    icon="pen-to-square"
-    href="https://mintlify.com/docs/quickstart"
-  >
-    Get your docs set up locally for easy development
+## Quick Links
+
+<CardGroup cols={4}>
+  <Card title="SEO Agent" icon="robot" href="/guides/seo-agent">
+    Chat with an expert AI powered by fetchSERP
   </Card>
-  <Card
-    title="Preview Changes"
-    icon="image"
-    href="https://mintlify.com/docs/development"
-  >
-    Preview your changes before you push to make sure they're perfect
+  <Card title="LLM Integration" icon="brain" href="/guides/llm">
+    Integrate fetchSERP with Claude / OpenAI via MCP
+  </Card>
+  <Card title="SDKs" icon="cube" href="/guides/sdks">
+    Official SDKs for JavaScript, Python, and Ruby
+  </Card>
+  <Card title="Pricing" icon="tag" href="/pricing">
+    Simple credit-based pricing
   </Card>
 </CardGroup>
 
-## Make it yours
+## Example Request
 
-Update your docs to your brand and add valuable content for the best user conversion.
+```javascript
+const response = await fetch(
+  'https://www.fetchserp.com/api/v1/serp?' +
+    new URLSearchParams({
+      search_engine: 'google',
+      country: 'us',
+      pages_number: '1',
+      query: 'serp+api'
+    }),
+  {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      authorization: 'Bearer TOKEN'
+    }
+  }
+);
 
-<CardGroup cols={2}>
-  <Card
-    title="Customize Style"
-    icon="palette"
-    href="https://mintlify.com/docs/settings/global"
-  >
-    Customize your docs to your company's colors and brands
-  </Card>
-  <Card
-    title="Reference APIs"
-    icon="code"
-    href="https://mintlify.com/docs/api-playground/openapi"
-  >
-    Automatically generate endpoints from an OpenAPI spec
-  </Card>
-  <Card
-    title="Add Components"
-    icon="screwdriver-wrench"
-    href="https://mintlify.com/docs/content/components/accordions"
-  >
-    Build interactive features and designs to guide your users
-  </Card>
-  <Card
-    title="Get Inspiration"
-    icon="stars"
-    href="https://mintlify.com/customers"
-  >
-    Check out our showcase of our favorite documentation
-  </Card>
-</CardGroup>
+const data = await response.json();
+console.dir(data, { depth: null });
+```
+
+Connected `200 OK`
+
+---
+
+## Core Endpoints
+
+| Category | Path | Description |
+|----------|------|-------------|
+| SERP | `/api/v1/serp` | Structured SERP results from Google, Bing, Yahoo, DuckDuckGo |
+| Ranking | `/api/v1/ranking` | Domain ranking for a keyword |
+| SERP HTML | `/api/v1/serp_html` | SERP results with full HTML |
+| SERP Text | `/api/v1/serp_text` | SERP results with extracted text |
+| SERP JS | `/api/v1/serp_js` | JavaScript-rendered SERP with AI Overview |
+| SERP AI | `/api/v1/serp_ai` | AI Overview + AI Mode results |
+| SERP AI Mode | `/api/v1/serp_ai_mode` | Cached US-only AI Mode |
+| Page Indexation | `/api/v1/page_indexation` | Check page indexation status |
+| Backlinks | `/api/v1/backlinks` | Backlink data for a domain |
+| Keywords Search Volume | `/api/v1/keywords_search_volume` | Monthly volume & competition |
+| Keywords Suggestions | `/api/v1/keywords_suggestions` | Keyword ideas & metrics |
+| Long Tail Keywords | `/api/v1/long_tail_keywords_generator` | Generate long-tail keywords |
+| Scrape Web Page | `/api/v1/scrape` | Raw HTML without JS |
+| Scrape Web Page JS | `/api/v1/scrape_js` | Custom JS extraction |
+| Scrape Web Page JS Proxy | `/api/v1/scrape_js_with_proxy` | JS extraction through proxy |
+| Domain Scraping | `/api/v1/domain_scraping` | Crawl an entire domain |
+| Web Page SEO Analysis | `/api/v1/web_page_seo_analysis` | Technical & on-page SEO audit |
+| Web Page AI Analysis | `/api/v1/web_page_ai_analysis` | AI-powered content analysis |
+| Domain Info | `/api/v1/domain_infos` | DNS, WHOIS & tech stack |
+| Domain Emails | `/api/v1/domain_emails` | Extract emails from SERPs |
+| Moz Analysis | `/api/v1/moz` | Moz domain authority & metrics |

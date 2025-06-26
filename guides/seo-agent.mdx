@@ -1,0 +1,55 @@
+---
+title: SEO Agent
+description: "Chat with an SEO expert AI powered by fetchSERP"
+---
+
+# Talk SEO with AI 💬
+
+Connect fetchSERP to Claude Desktop (or any MCP-compatible client) and get live SEO insights through natural conversation.
+
+<Callout icon="robot">
+Use the SEO Agent when you need analysis on keywords, rankings, backlinks, and more—without leaving your chat window.
+</Callout>
+
+## Setup in 2 minutes
+
+1. **Get an API token** from your [fetchSERP dashboard](https://www.fetchserp.com)
+2. **Add the MCP server configuration** to Claude Desktop:
+
+```json title="~/Library/Application Support/Claude/claude_desktop_config.json"
+{
+  "mcpServers": {
+    "fetchserp": {
+      "command": "npx",
+      "args": [
+        "github:fetchSERP/fetchserp-mcp-server-node"
+      ],
+      "env": {
+        "FETCHSERP_API_TOKEN": "YOUR_FETCHSERP_API_TOKEN"
+      }
+    }
+  }
+}
+```
+
+3. **Restart Claude Desktop** and start chatting! ✨
+
+## What can I ask?
+
+```prompt
+What are the top keywords my competitor "example.com" is ranking for?
+```
+
+```prompt
+Analyze the backlinks for the domain "fetchserp.com" and suggest improvements.
+```
+
+```prompt
+Find long-tail keywords with low competition related to "email marketing".
+```
+
+## How it works
+
+The MCP server exposes all fetchSERP endpoints as tools inside the chat. When you ask a question, Claude chooses the right endpoint, fetches real-time data, and responds with actionable insights.
+
+Want to integrate with your own chat UI or LLM? Head over to our [LLM Integration guide](/guides/llm). 

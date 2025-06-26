@@ -1,0 +1,106 @@
+---
+title: Official SDKs
+description: "Use fetchSERP in your favorite language"
+---
+
+Choose the SDK that fits your stack and start coding in seconds.
+
+<CardGroup cols={3}>
+  <Card title="JavaScript / TypeScript" icon="square-code" href="#javascript-typescript">
+    npm, pnpm, Yarn – your choice
+  </Card>
+  <Card title="Python" icon="file-code" href="#python">
+    Clean & Pythonic API
+  </Card>
+  <Card title="Ruby" icon="gem" href="#ruby">
+    Lightweight & hand-crafted
+  </Card>
+</CardGroup>
+
+---
+
+## JavaScript / TypeScript
+
+```bash
+npm install fetchserp
+# or
+yarn add fetchserp
+```
+
+```typescript title="example.ts"
+import FetchSERP from 'fetchserp';
+
+const client = new FetchSERP('YOUR_API_TOKEN');
+const serp = await client.serp({
+  query: 'serp api',
+  search_engine: 'google',
+  country: 'us',
+  pages_number: 1
+});
+console.log(serp.data.results);
+```
+
+---
+
+## Python
+
+```bash
+pip install fetchserp
+```
+
+```python title="example.py"
+from fetchserp import FetchSERP
+
+client = FetchSERP('YOUR_API_TOKEN')
+results = client.serp(query='serp api', search_engine='google', country='us', pages_number=1)
+print(results['data']['results'])
+```
+
+---
+
+## Ruby
+
+```bash
+gem install fetchserp
+```
+
+```ruby title="example.rb"
+require 'fetchserp'
+
+client = FetchSERP::Client.new(api_key: 'YOUR_API_TOKEN')
+results = client.serp(query: 'serp api', search_engine: 'google', country: 'us', pages_number: 1)
+puts results['data']['results']
+```
+
+---
+
+### Available Methods
+
+All SDKs expose a 1-to-1 mapping between helper methods and API endpoints:
+
+```text
+serp(query, search_engine="google", country="us", pages_number=1)
+ranking(domain, keyword, search_engine="google", country="us")
+serp_html(...)
+serp_text(...)
+serp_js(...)
+serp_ai(...)
+page_indexation(...)
+keywords_search_volume(keywords, country="us")
+keywords_suggestions(keywords=None, url=None, country="us")
+long_tail_keywords_generator(keyword, search_intent="informational", count=10)
+backlinks(domain, pages_number=1)
+web_page_seo_analysis(url)
+web_page_ai_analysis(url, prompt)
+...etc
+```
+
+> Each method returns the raw JSON the API responds with, along with HTTP metadata.
+
+---
+
+## Contributing & Support
+
+All SDKs are open source on our [GitHub organization](https://github.com/fetchserp). Feel free to open issues or PRs.
+
+Need an SDK in another language? Open a feature request or reach out to [support@fetchserp.com](mailto:support@fetchserp.com). 

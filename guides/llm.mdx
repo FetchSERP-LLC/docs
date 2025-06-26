@@ -1,0 +1,107 @@
+---
+title: LLM Integration
+description: "Super-charge your AI with real-time SEO data from fetchSERP"
+---
+
+fetchSERP speaks **Model Context Protocol (MCP)**, making it plug-and-play with any LLM that supports tool calling.
+
+## Supported Providers
+
+<CardGroup cols={3}>
+  <Card title="Claude API" icon="brain" href="#claude">
+    Anthropic models with tool calling (v2025-05-14+)
+  </Card>
+  <Card title="OpenAI API" icon="globe-americas" href="#openai">
+    GPT-4 / GPT-4o with `mcp` tool
+  </Card>
+  <Card title="Custom Agents" icon="puzzle-piece" href="#custom">
+    Any framework that can call REST endpoints
+  </Card>
+</CardGroup>
+
+## Claude API Example
+
+```javascript title="claude.js"
+const claudeRequest = {
+  model: 'claude-sonnet-4-20250514',
+  messages: [
+    { role: 'user', content: 'Give me keyword ideas for "seo audit"' }
+  ],
+  mcp_servers: [
+    {
+      type: 'url',
+      url: 'https://www.fetchserp.com/mcp',
+      name: 'fetchserp',
+      authorization_token: process.env.FETCHSERP_API_TOKEN,
+      tool_configuration: {
+        enabled: true
+      }
+    }
+  ]
+};
+```
+
+## OpenAI API Example
+
+```javascript title="openai.js"
+let response = await openai.chat.completions.create({
+  model: 'gpt-4o',
+  messages: [
+    { role: 'user', content: 'Check my domain ranking for "project management tools"' }
+  ],
+  tools: [
+    {
+      type: 'mcp',
+      server_label: 'fetchserp',
+      server_url: process.env.MCP_SERVER_URL, // https://www.fetchserp.com/mcp
+      headers: {
+        Authorization: `Bearer ${process.env.FETCHSERP_API_TOKEN}`
+      }
+    }
+  ]
+});
+```
+
+## Custom Agent Flow
+
+1. Call the `/mcp/schema` endpoint to fetch a JSON schema describing every fetchSERP tool.
+2. Feed that schema to your LLM along with user instructions.
+3. Execute tool calls returned by the LLM and stream the results back.
+
+For an end-to-end reference implementation, check out the **fetchserp-mcp-server** on GitHub.
+
+## Best Practices
+
+* **One server per request** – List only the tools you actually need.
+* **Stream responses** – Large SERP payloads benefit from HTTP chunked encoding.
+* **Cache intelligently** – Many endpoints are cached for 15 minutes, so store UUIDs where applicable.
+
+## Features Available via MCP
+
+| Tool Name | REST Endpoint | What It Does |
+|-----------|---------------|--------------|
+| serp | `/api/v1/serp` | Structured SERP results from Google, Bing, Yahoo, DuckDuckGo |
+| ranking | `/api/v1/ranking` | Domain ranking for a keyword |
+| serp_html | `/api/v1/serp_html` | SERP results with full HTML content |
+| serp_text | `/api/v1/serp_text` | SERP results with extracted text |
+| serp_js | `/api/v1/serp_js` | JavaScript-rendered SERP with AI Overview |
+| serp_ai | `/api/v1/serp_ai` | AI Overview + AI Mode response |
+| serp_ai_mode | `/api/v1/serp_ai_mode` | Cached US-only AI Mode |
+| keywords_search_volume | `/api/v1/keywords_search_volume` | Monthly search volume metrics |
+| keywords_suggestions | `/api/v1/keywords_suggestions` | Keyword ideas & metrics |
+| long_tail_keywords_generator | `/api/v1/long_tail_keywords_generator` | Generate long-tail keywords |
+| page_indexation | `/api/v1/page_indexation` | Check if a page is indexed |
+| backlinks | `/api/v1/backlinks` | Backlink data for a domain |
+| web_page_seo_analysis | `/api/v1/web_page_seo_analysis` | Technical & on-page SEO audit |
+| web_page_ai_analysis | `/api/v1/web_page_ai_analysis` | AI-powered content analysis |
+| scrape | `/api/v1/scrape` | Raw HTML (no JS) |
+| scrape_js | `/api/v1/scrape_js` | Custom JS extraction |
+| scrape_js_with_proxy | `/api/v1/scrape_js_with_proxy` | JS extraction through proxy |
+| domain_scraping | `/api/v1/domain_scraping` | Crawl an entire domain |
+| domain_infos | `/api/v1/domain_infos` | DNS, WHOIS, SSL, tech stack |
+| domain_emails | `/api/v1/domain_emails` | Extract emails from SERPs |
+| moz | `/api/v1/moz` | Moz domain authority & metrics |
+
+> These tools are auto-generated from our OpenAPI spec, so new endpoints will appear here automatically.
+
+Need help? [Contact support](mailto:support@fetchserp.com) or jump in our Slack community. 

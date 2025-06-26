@@ -1,33 +1,27 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: API Overview
+description: "Authentication, rate limits, and spec for the fetchSERP API"
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
-
-## Welcome
-
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
-
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+Welcome to the **fetchSERP API** documentation. All reference pages you see in this section are auto-generated from our [openapi.json](/openapi.json) specification, so they're always in sync with the latest version of the API.
 
 ## Authentication
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+Every request must include your API token in the `Authorization` header as a **Bearer** token:
 
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
+```http
+Authorization: Bearer YOUR_API_TOKEN
 ```
+
+• Tokens are created in the [dashboard](https://www.fetchserp.com).  
+• If a request is sent without a token or with an invalid token, the API responds with **401 Unauthorized**.
+
+## Rate Limits
+
+We allow up to **600 requests per minute** per account (aggregated across all endpoints). When the limit is exceeded the API responds with **429 Too Many Requests** plus a `Retry-After` header indicating how many seconds to wait before retrying.
+
+If you need higher throughput, please [contact support](mailto:support@fetchserp.com) and we'll bump the limit for your workspace.
+
+---
+
+Need a quick start? Head over to the [Quickstart guide](/quickstart) or explore a specific endpoint in the sidebar.

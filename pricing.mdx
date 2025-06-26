@@ -1,0 +1,76 @@
+---
+title: Pricing
+description: "Simple credit-based pricing for fetchSERP"
+---
+
+# Simple Pay-As-You-Go Pricing
+
+$1 = **1,000 credits**. Credits never expire and you only pay for what you use.
+
+[Get API Key](https://www.fetchserp.com) · [Go to Playground](/api-reference/introduction)
+
+<Info>
+Every new account starts with **250 free credits**—no credit card required.
+</Info>
+
+## Search & Rankings Endpoints
+
+| Endpoint | Description | Cost |
+|----------|-------------|------|
+| `/serp` | Search engine results (up to 30 pages) | **1 credit / page** |
+| `/ranking` | Domain ranking for a keyword (up to 30 pages) | **1 credit / page** |
+| `/serp_html` / `/serp_text` | SERP content (HTML or extracted text) | **2 credits / page** |
+| `/serp_js` | JavaScript-rendered SERP with AI Overview | **15 credits** |
+| `/serp_ai` | AI Overview + AI Mode response | **20 credits** |
+| `/serp_ai_mode` | Cached US-only AI Mode response | **15 credits** |
+| `/page_indexation` | Check if a page is indexed for a keyword | **1 credit** |
+
+## Keyword Intelligence Endpoints
+
+| Endpoint | Description | Cost |
+|----------|-------------|------|
+| `/keywords_search_volume` | Monthly search volume & competition | **2 credits** |
+| `/keywords_suggestions` | Keyword suggestions with metrics | **3 credits** |
+| `/long_tail_keywords_generator` | Generate long-tail keywords | **10 credits** |
+
+## Web Scraping Endpoints
+
+| Endpoint | Description | Cost |
+|----------|-------------|------|
+| `/scrape` | Raw HTML (no JS) | **1 credit / page** |
+| `/scrape_js` | Custom JS extraction | **5 credits / page** |
+| `/scrape_js_with_proxy` | JS extraction through proxy | **15 credits / page** |
+| `/domain_scraping` | Crawl up to 200 pages of a domain | **1 credit / page** |
+
+## SEO & Domain Endpoints
+
+| Endpoint | Description | Cost |
+|----------|-------------|------|
+| `/web_page_seo_analysis` | Technical & on-page SEO audit | **5 credits** |
+| `/web_page_ai_analysis` | AI-powered content analysis | **10 credits** |
+| `/backlinks` | Backlink data (up to 30 pages) | **2 credits / page** |
+| `/domain_emails` | Retrieve emails from SERPs (up to 30 pages) | **2 credits / page** |
+| `/domain_infos` | DNS, WHOIS, SSL, tech stack | **5 credits** |
+| `/moz` | Moz domain authority & metrics | **15 credits** |
+
+---
+
+## Example Cost Calculation
+
+Suppose you:
+
+* Fetch 3 pages of Google SERP results → `3 × 1 = 3 credits`
+* Get ranking data for 5 keywords (single page each) → `5 × 1 = 5 credits`
+* Run a full web page SEO analysis → `5 credits`
+
+**Total** = **13 credits** (≈ **$0.013**)
+
+---
+
+## Volume Discounts
+
+Need millions of requests or a custom SLA? [Contact sales](mailto:sales@fetchserp.com) for volume pricing and enterprise features.
+
+<Tip>
+Credits never expire, so you can top up whenever you need more.
+</Tip>
