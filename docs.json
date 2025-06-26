@@ -32,6 +32,12 @@
               "guides/llm",
               "guides/sdks"
             ]
+          },
+          {
+            "group": "Use Cases",
+            "pages": [
+              "guides/use-cases"
+            ]
           }
         ]
       },
@@ -70,7 +76,7 @@
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://www.fetchserp.com"
+      "href": "https://www.fetchserp.com/app"
     }
   },
   "footer": {
