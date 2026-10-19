@@ -16,6 +16,21 @@ Authorization: Bearer YOUR_API_TOKEN
 • Tokens are created in the [dashboard](https://www.fetchserp.com/app).  
 • If a request is sent without a token or with an invalid token, the API responds with **401 Unauthorized**.
 
+## Google SERP options
+
+Google results on `/api/v1/serp`, `/api/v1/serp_html`, `/api/v1/serp_text` and `/api/v1/ranking` are rendered in a real browser, so they take a few extra, Google-only parameters:
+
+| Parameter | What it does |
+| --- | --- |
+| `device` | `desktop` (default) or `mobile`. Mobile results come from a phone profile and are collected with Google's "More results" loading rather than numbered pages. |
+| `location` | `lat,lng` in decimal degrees (for example `40.6782,-73.9442`). The browser session is placed there, so local results and the SERP footer reflect that location. Pair it with `timezone` (an IANA id such as `America/New_York`). |
+| `resolve_urls` | Default `true`. Google's `google.com/goto` redirect links are followed to their destination; each result reports `url_resolved` and `url_source`, and the response carries a `resolution` summary. |
+| `strict` | Default `false`. Return `422` instead of results when the page looks poisoned. |
+| `samples` | `/serp` only. Take 1-5 independent captures of page 1 and return how often each domain appears across them (`distribution`). |
+| `max_resamples` | Extra captures (0-3) taken when page 1 looks poisoned; the best one is returned. Each is a fresh browser identity, so it can add tens of seconds. |
+
+Every Google page is scored for poisoning and the score comes back in `quality` (`score`, `flags`, `suspected_poisoned`). When a later page of a multi-page request fails, the pages that did load are returned with a `warnings` array instead of an error; only a request with no results at all fails. The full parameter and response schemas are on each endpoint's page.
+
 ## Rate Limits
 
 We allow up to **600 requests per minute** per account (aggregated across all endpoints). When the limit is exceeded the API responds with **429 Too Many Requests** plus a `Retry-After` header indicating how many seconds to wait before retrying.
