@@ -23,7 +23,7 @@ Google results on `/api/v1/serp`, `/api/v1/serp_html`, `/api/v1/serp_text` and `
 | Parameter | What it does |
 | --- | --- |
 | `device` | `desktop` (default) or `mobile`. Mobile results come from a phone profile and are collected with Google's "More results" loading rather than numbered pages. |
-| `location` | `lat,lng` in decimal degrees (for example `40.6782,-73.9442`). The browser session is placed there, so local results and the SERP footer reflect that location. Pair it with `timezone` (an IANA id such as `America/New_York`). |
+| `location` | Where the search is made from: `lat,lng` in decimal degrees (for example `40.6782,-73.9442`), or a place name — a city, neighborhood, county, state or postal code (`Brooklyn, NY`, `Austin TX`, `11216`, `SW1A 1AA, UK`). The browser session is placed there, so local results and the SERP footer reflect that location. Names come back resolved in the response's `location` block (`name`, `type`, coordinates, `timezone`); find valid names with `GET /api/v1/locations?q=brook` (free). A named location sets its own time zone; for coordinates, pass `timezone` (an IANA id such as `America/New_York`). |
 | `resolve_urls` | Default `true`. Google's `google.com/goto` redirect links are followed to their destination; each result reports `url_resolved` and `url_source`, and the response carries a `resolution` summary. |
 | `strict` | Default `false`. Return `422` instead of results when the page looks poisoned. |
 | `samples` | `/serp` only. Take 1-5 independent captures of page 1 and return how often each domain appears across them (`distribution`). |

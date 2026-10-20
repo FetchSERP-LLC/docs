@@ -33,33 +33,33 @@
         "operationId": "index_api_v1_backlinks",
         "parameters": [
           {
-            "$ref": "#/components/parameters/7a4323da9edb17e37042780b0324dfa9"
+            "$ref": "#/components/parameters/ec5996e4a159a4901c7d8af4f1bc5497"
           },
           {
-            "$ref": "#/components/parameters/3c008e11dc109d8fa2f48877d536e2fe"
+            "$ref": "#/components/parameters/6652aaf745156ab2ef80dd9891a11ea2"
           },
           {
-            "$ref": "#/components/parameters/9c5679019fc63abf00a7a6b05e6ead59"
+            "$ref": "#/components/parameters/9ccc3be88a72c474df2eefc3b72e81d4"
           },
           {
-            "$ref": "#/components/parameters/7aeb7b3feab83b727bb804d8728e2217"
+            "$ref": "#/components/parameters/b9a775c79f43e94a2a59c47777115f3c"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/30c2e76ee2cbe108fe07b9edc66d5731"
+            "$ref": "#/components/responses/a93bd9bcae77a5f7559a5bb6a941468e"
           },
           "422": {
-            "$ref": "#/components/responses/68a8e37dbcd6af921f6abca754058ad0"
+            "$ref": "#/components/responses/b2b709d0cdf0c8955fbcfc89469e1698"
           },
           "500": {
-            "$ref": "#/components/responses/aa89ef42cfa9f64044403932492cf6d6"
+            "$ref": "#/components/responses/f277ef6c75cce90c6bd32d9ceb58dcec"
           },
           "200": {
-            "$ref": "#/components/responses/cdb8596152989bb86af84f0748a3ac2a"
+            "$ref": "#/components/responses/d1fe516663db5363be38cf0ddabda548"
           },
           "403": {
-            "$ref": "#/components/responses/d7e809e073148d794f27fb789db2bbe9"
+            "$ref": "#/components/responses/5c7775c1669a18c0106d3f8621fc53c9"
           }
         },
         "security": [
@@ -79,33 +79,33 @@
         "operationId": "index_api_v1_domain_emails",
         "parameters": [
           {
-            "$ref": "#/components/parameters/9f70e9a4d60ce792a2624403d1400445"
+            "$ref": "#/components/parameters/9435f9d53010ac7d0c496383c9d4c7ea"
           },
           {
-            "$ref": "#/components/parameters/b4a68c9940a2817cf1cffbc9781a0681"
+            "$ref": "#/components/parameters/82684a02ea93b9c2e9c9bf4011448b55"
           },
           {
-            "$ref": "#/components/parameters/9c5679019fc63abf00a7a6b05e6ead59"
+            "$ref": "#/components/parameters/9ccc3be88a72c474df2eefc3b72e81d4"
           },
           {
-            "$ref": "#/components/parameters/f1227a93e97a5bbf4621ae84fbc94c6b"
+            "$ref": "#/components/parameters/412f4eaf7b6d0c834d0c456653165400"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/230062febfcf53cc1a17e49a1d213e2a"
+            "$ref": "#/components/responses/edb64fd04c0bbc7c4b215f1663c9c7f9"
           },
           "422": {
-            "$ref": "#/components/responses/cc7ad3ab262b2a2b664b7a48c303eb0b"
+            "$ref": "#/components/responses/a851b1a892e048689fd77528cd30bb2d"
           },
           "500": {
-            "$ref": "#/components/responses/b51b5300454bb5fca4c0f3619032caff"
+            "$ref": "#/components/responses/95e0ea4a1222ad94ca6def972fadd378"
           },
           "200": {
-            "$ref": "#/components/responses/2df87884c9aad50e36d85b5640e69f18"
+            "$ref": "#/components/responses/efd306c6f6c894c8e8b53447cc72a66f"
           },
           "403": {
-            "$ref": "#/components/responses/bd1121db302d2e67255bae9a365fed67"
+            "$ref": "#/components/responses/ebfa25e007419df500a367344181918a"
           }
         },
         "security": [
@@ -125,24 +125,24 @@
         "operationId": "index_api_v1_domain_infos",
         "parameters": [
           {
-            "$ref": "#/components/parameters/635a108ff96f29e4edb71891d25bff13"
+            "$ref": "#/components/parameters/5d6895f444df094b4215eaec576f1908"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/3dc7786bff8be4968c75c1c31a467de2"
+            "$ref": "#/components/responses/abce9eb2ad79ef94dcfce145643c847d"
           },
           "422": {
-            "$ref": "#/components/responses/0de60c265ca75ed2aa7ef8b9cc672baf"
+            "$ref": "#/components/responses/b8f1580714e31df136a5137695f73046"
           },
           "500": {
-            "$ref": "#/components/responses/618621f3bedd050a1ebee484239e6ac0"
+            "$ref": "#/components/responses/6c4fbbc6b231f159a9ad3eb48ee466ca"
           },
           "200": {
-            "$ref": "#/components/responses/c1e1c81ea0379ab04f3ea3dc9784d319"
+            "$ref": "#/components/responses/2c06124bb57e0e500b9ad60b5ffcb7fb"
           },
           "403": {
-            "$ref": "#/components/responses/a7bb2e1fba4608f860e1108556b17c05"
+            "$ref": "#/components/responses/6e1ea9b2b056a7031c122409232f5ce4"
           }
         },
         "security": [
@@ -162,24 +162,24 @@
         "operationId": "index_api_v1_generate_social_content",
         "parameters": [
           {
-            "$ref": "#/components/parameters/6871e6b8638aa5ddfcf90684c6670dbf"
+            "$ref": "#/components/parameters/663bf76199d9d4915b6d86a84e0c1e30"
           },
           {
-            "$ref": "#/components/parameters/f82870b36f60d76e1dbc191e11bad568"
+            "$ref": "#/components/parameters/42ae358ffbeda61d84ecf8c933c49858"
           },
           {
-            "$ref": "#/components/parameters/175075e4bcf56ee7892a1e095c9f3e2e"
+            "$ref": "#/components/parameters/813ce0527dbccce3fec395d3380e26ae"
           }
         ],
         "responses": {
           "200": {
-            "$ref": "#/components/responses/208f43aa05760e98779aaad017f2565c"
+            "$ref": "#/components/responses/e5c1d5d9bbbb8cded80f0ca71b53ceb8"
           },
           "401": {
-            "$ref": "#/components/responses/939de32ae74a97aa40d47ea0ce6faf08"
+            "$ref": "#/components/responses/cef01ae2b5a12635b4ad6a185783e1f6"
           },
           "403": {
-            "$ref": "#/components/responses/754c2b2062408f71bccff5df24694a40"
+            "$ref": "#/components/responses/1297c7df63291f085133dc9ffde51ffb"
           }
         },
         "security": [
@@ -199,24 +199,24 @@
         "operationId": "index_api_v1_generate_wordpress_content",
         "parameters": [
           {
-            "$ref": "#/components/parameters/6871e6b8638aa5ddfcf90684c6670dbf"
+            "$ref": "#/components/parameters/663bf76199d9d4915b6d86a84e0c1e30"
           },
           {
-            "$ref": "#/components/parameters/f82870b36f60d76e1dbc191e11bad568"
+            "$ref": "#/components/parameters/42ae358ffbeda61d84ecf8c933c49858"
           },
           {
-            "$ref": "#/components/parameters/175075e4bcf56ee7892a1e095c9f3e2e"
+            "$ref": "#/components/parameters/813ce0527dbccce3fec395d3380e26ae"
           }
         ],
         "responses": {
           "200": {
-            "$ref": "#/components/responses/3f0a1c6cfbfd0aa598e445d1a3eed01a"
+            "$ref": "#/components/responses/2b7c700a11e2813a900ea330a7d5f236"
           },
           "401": {
-            "$ref": "#/components/responses/3ea9989d2947de20f4d93a01cb9ee6bf"
+            "$ref": "#/components/responses/e2c091d07320d71b8c9f7d85e16f6c71"
           },
           "403": {
-            "$ref": "#/components/responses/9b7b11c24d0d6ec60d438db001b908ff"
+            "$ref": "#/components/responses/5fd4c96781f70995cca6db55ed5f3db0"
           }
         },
         "security": [
@@ -236,27 +236,27 @@
         "operationId": "index_api_v1_keywords_search_volume",
         "parameters": [
           {
-            "$ref": "#/components/parameters/95bbb06261987031e9385be50cd89c19"
+            "$ref": "#/components/parameters/ddcd803a21dcfe451e8c81c84ff9cebf"
           },
           {
-            "$ref": "#/components/parameters/9c1db8a07d573d7f932379961ba22187"
+            "$ref": "#/components/parameters/f57056bbe5058d852d674b807dba1aa0"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/011a37ada47b1443d490610a3323a2df"
+            "$ref": "#/components/responses/601b134b5b051845782bbb4f20bdc827"
           },
           "422": {
-            "$ref": "#/components/responses/cb345d87de049be0c24d4d2ea0e7dad3"
+            "$ref": "#/components/responses/1b5a10a7fc85e914d3e43922bf30417d"
           },
           "500": {
-            "$ref": "#/components/responses/746f73307e58b14207decbb6d49ac7f3"
+            "$ref": "#/components/responses/c9024952169602557d888cab880f6393"
           },
           "200": {
-            "$ref": "#/components/responses/9a5bb1275f991c2581d500a72cd17aec"
+            "$ref": "#/components/responses/70287a1f30bedb630f347d6eb2d23705"
           },
           "403": {
-            "$ref": "#/components/responses/2a104f88cf2f85600dd42f08bf881dda"
+            "$ref": "#/components/responses/81fcba23419fcdb4eaf12ad44ad41854"
           }
         },
         "security": [
@@ -276,30 +276,70 @@
         "operationId": "index_api_v1_keywords_suggestions",
         "parameters": [
           {
-            "$ref": "#/components/parameters/960e7de68b14a7af64c4833e131683b6"
+            "$ref": "#/components/parameters/f3421a5aaa312c7e18a64c79f7265b04"
           },
           {
-            "$ref": "#/components/parameters/be0c636bd304325c5634b9111fbbd679"
+            "$ref": "#/components/parameters/e33aca1bdf56d21449b3ec6c7cc7d7a0"
           },
           {
-            "$ref": "#/components/parameters/9c1db8a07d573d7f932379961ba22187"
+            "$ref": "#/components/parameters/f57056bbe5058d852d674b807dba1aa0"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/767043e437148e9e4bd18e9966fd7885"
+            "$ref": "#/components/responses/f636af961bd02f2dc3ff2abda8bb0611"
           },
           "422": {
-            "$ref": "#/components/responses/7a17b50b147d57ba689f159ab024e628"
+            "$ref": "#/components/responses/346f869572ef51d5b9eab3d6a3f46d41"
           },
           "500": {
-            "$ref": "#/components/responses/75958c5260934a78fa7b37f84e005433"
+            "$ref": "#/components/responses/1a8ec6f283e8c19dea1243acb50883ec"
           },
           "200": {
-            "$ref": "#/components/responses/441c7490bf2254774f7dd452b90161fa"
+            "$ref": "#/components/responses/1ff47801ad9b38e458d52522647cb8bb"
           },
           "403": {
-            "$ref": "#/components/responses/f024e3cb58444cf4e97ddfc3dfb25a24"
+            "$ref": "#/components/responses/182637d6c52b7a7604429e1eea2b2a5f"
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/locations": {
+      "get": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Locations",
+        "description": "Look up place names accepted by the `location` parameter of the Google SERP endpoints. Any `name` returned here can be passed as `location` as-is. Free of charge.",
+        "operationId": "index_api_v1_locations",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/cea98d6c557f1d3904ea55bad3c97f04"
+          },
+          {
+            "$ref": "#/components/parameters/3fb5156be195abe9a78dcfa52d0e0415"
+          },
+          {
+            "$ref": "#/components/parameters/2fbb874677d66903862a7c7431b9927b"
+          }
+        ],
+        "responses": {
+          "401": {
+            "$ref": "#/components/responses/8914c98e3ba37dc36b16e721f86fe52c"
+          },
+          "422": {
+            "$ref": "#/components/responses/ebfdcc92cdd9f33caf4161182a99ba88"
+          },
+          "200": {
+            "$ref": "#/components/responses/a90422450e9104cc43fa412db111509f"
+          },
+          "403": {
+            "$ref": "#/components/responses/db6c00b0fc58e54768d48e8b79e7a564"
           }
         },
         "security": [
@@ -319,30 +359,30 @@
         "operationId": "index_api_v1_long_tail_keywords_generator",
         "parameters": [
           {
-            "$ref": "#/components/parameters/e297de1426baed91f4383a1d1fdc4394"
+            "$ref": "#/components/parameters/6731939174d446f0c67ac559cf86a8aa"
           },
           {
-            "$ref": "#/components/parameters/87de6d8991abee8c0aff67fa3703ecd5"
+            "$ref": "#/components/parameters/5574c6708f5a5138ac7401c6fab3fd90"
           },
           {
-            "$ref": "#/components/parameters/283cf12c962ff38fe1ca4e769ae8243b"
+            "$ref": "#/components/parameters/29a0bf98ffefb7ee03a676efd22be36d"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/192dd5179d8ba9c6604fd5e5abc8334c"
+            "$ref": "#/components/responses/10954527fd00d535ee51b044b1628226"
           },
           "422": {
-            "$ref": "#/components/responses/171427e2e9be39b73627f24c3d1a7b1f"
+            "$ref": "#/components/responses/4e720a783dd548a5476dae6d1b5a23c0"
           },
           "500": {
-            "$ref": "#/components/responses/68409566db226392a05630d5b8beb1e5"
+            "$ref": "#/components/responses/bfd0467171c7297342c04525fd343fcb"
           },
           "200": {
-            "$ref": "#/components/responses/fe44f9363e1db460ed69dc49f17acc1b"
+            "$ref": "#/components/responses/1dc114ef7bd795b1d27e6f3ff8550ba2"
           },
           "403": {
-            "$ref": "#/components/responses/3411f25da1e6a0910d71a9596ce0da16"
+            "$ref": "#/components/responses/2de60c38c0f7bb15e8731eb565905a4f"
           }
         },
         "security": [
@@ -362,24 +402,24 @@
         "operationId": "index_api_v1_moz",
         "parameters": [
           {
-            "$ref": "#/components/parameters/a9d1f44acd4dd0206173b940dbda39f7"
+            "$ref": "#/components/parameters/1566196118b05cf1c42990486c452624"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/3c24817dc7e74d1cb2bed44a4b1ed926"
+            "$ref": "#/components/responses/80a31a5a3e34962463246cc512e9d39d"
           },
           "422": {
-            "$ref": "#/components/responses/83cf9d82f097618cd7a190e5c28b1835"
+            "$ref": "#/components/responses/1d83ec9b88868e76a60347c991ec676c"
           },
           "500": {
-            "$ref": "#/components/responses/8c33dc74dc90034f5e96599df15302d9"
+            "$ref": "#/components/responses/71a0353bb216e1277e21a91e9c0ccb84"
           },
           "200": {
-            "$ref": "#/components/responses/7999be11993287a4a79c72fd4dfc227c"
+            "$ref": "#/components/responses/76dc73c48c2cb3fbffe803b0038a1669"
           },
           "403": {
-            "$ref": "#/components/responses/aaf672aee2beae6ae65798963acdcada"
+            "$ref": "#/components/responses/17ec37cd0cc746907a9b78429d0b906d"
           }
         },
         "security": [
@@ -399,27 +439,27 @@
         "operationId": "index_api_v1_page_indexation",
         "parameters": [
           {
-            "$ref": "#/components/parameters/635a108ff96f29e4edb71891d25bff13"
+            "$ref": "#/components/parameters/5d6895f444df094b4215eaec576f1908"
           },
           {
-            "$ref": "#/components/parameters/1185eb8b80fa7bd3029df99a5e881eab"
+            "$ref": "#/components/parameters/05913b9c6ec31ec5d2bb993d37e24db0"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/09cb4c4b2ccc1154f59c2a2819530d2a"
+            "$ref": "#/components/responses/27536bb3d6b0b8c87b58453f01b388f5"
           },
           "422": {
-            "$ref": "#/components/responses/61430294a8d81b0428dc2c869f7c42c1"
+            "$ref": "#/components/responses/a897657704b40912a117c26f28ea7ec4"
           },
           "500": {
-            "$ref": "#/components/responses/f0218dba4568ef73b1d67d015e8c5e51"
+            "$ref": "#/components/responses/dcc761eb969c543eaa38d88687c5ee44"
           },
           "200": {
-            "$ref": "#/components/responses/d76bf8565594c525bcb21d2f0581527c"
+            "$ref": "#/components/responses/d448101ad4bfddf262149c08dbae2f92"
           },
           "403": {
-            "$ref": "#/components/responses/275c2d5480c5aa473294f048ed10d2b3"
+            "$ref": "#/components/responses/cf9bb8faa708469732aed995ad48dc36"
           }
         },
         "security": [
@@ -439,24 +479,24 @@
         "operationId": "index_api_v1_playwright_mcp",
         "parameters": [
           {
-            "$ref": "#/components/parameters/1e016fc49b041a1fa71ffb0fb3a9063a"
+            "$ref": "#/components/parameters/9b889481cbeffc90f91a766b9c0eb0d7"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/7ecd78f1f09fdab3a31ea847902f33c0"
+            "$ref": "#/components/responses/a15653ba9595b7d6f07fc10346f68d13"
           },
           "422": {
-            "$ref": "#/components/responses/dc12ebd72ce8c87114fcd5ff6bf95a5b"
+            "$ref": "#/components/responses/77a349bdb09a071f00dd90cdab8677d1"
           },
           "500": {
-            "$ref": "#/components/responses/c2a03e86b8fb5875cfd46a7af2781f22"
+            "$ref": "#/components/responses/3e36bc45a8d4307237f3e3b89d2b78e3"
           },
           "200": {
-            "$ref": "#/components/responses/34b49189d03018f9c40c9a335efe9e09"
+            "$ref": "#/components/responses/f6d75ca89e68c715c78d3a999a5495e2"
           },
           "403": {
-            "$ref": "#/components/responses/ca34d4249e9e8dee89a787c79787ae72"
+            "$ref": "#/components/responses/b50eed768b217c6b44a47363c7e64a98"
           }
         },
         "security": [
@@ -476,51 +516,51 @@
         "operationId": "index_api_v1_ranking",
         "parameters": [
           {
-            "$ref": "#/components/parameters/ee44c750d282ae0fb2fde446b3954fff"
+            "$ref": "#/components/parameters/e6d945d28be14c38fab220258aa51faa"
           },
           {
-            "$ref": "#/components/parameters/216ab90a4d75eb62387e07777b0f00b5"
+            "$ref": "#/components/parameters/b0640cd2712d065b3613a95e1df3e0f0"
           },
           {
-            "$ref": "#/components/parameters/b4a68c9940a2817cf1cffbc9781a0681"
+            "$ref": "#/components/parameters/82684a02ea93b9c2e9c9bf4011448b55"
           },
           {
-            "$ref": "#/components/parameters/9c5679019fc63abf00a7a6b05e6ead59"
+            "$ref": "#/components/parameters/9ccc3be88a72c474df2eefc3b72e81d4"
           },
           {
-            "$ref": "#/components/parameters/815410dc2a3aaf6849ff2b1723f93b7f"
+            "$ref": "#/components/parameters/4fab2bf6ae27aed8b36c520cccb7dcde"
           },
           {
-            "$ref": "#/components/parameters/d74022a6c0699f96ca8f5b71e4ae8af7"
+            "$ref": "#/components/parameters/10d5c888514595e56838d39024459dda"
           },
           {
-            "$ref": "#/components/parameters/fe638c9388f52f6dcb452cae9729026f"
+            "$ref": "#/components/parameters/0e8c2ecb667d12129f7c25c452e8bea8"
           },
           {
-            "$ref": "#/components/parameters/2b176fd75e41120077dedbe662f1d1ad"
+            "$ref": "#/components/parameters/2dad2f8d14e0dd4e46dd165be31b3140"
           },
           {
-            "$ref": "#/components/parameters/c77e4a4e32ea1cf639df83c978e29182"
+            "$ref": "#/components/parameters/aa69b0b0f3fa1b0117a68717109f2fdc"
           },
           {
-            "$ref": "#/components/parameters/5ff84060c698299a0cf730c209ed9f2c"
+            "$ref": "#/components/parameters/1bf759ed266df8b144ab3ca015a24185"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/2488469ea539dada240ab70d95f9536d"
+            "$ref": "#/components/responses/340322023d81356e3c7545b87176f461"
           },
           "422": {
-            "$ref": "#/components/responses/4813e0939a77bcba8adbc772c0b57d13"
+            "$ref": "#/components/responses/8ef6eff228d7d7134f7805bd169425ce"
           },
           "500": {
-            "$ref": "#/components/responses/f35f56548aabab26f1a6d93c6c5a6b32"
+            "$ref": "#/components/responses/86b612f55c9b1aa6568977905b28dfa6"
           },
           "200": {
-            "$ref": "#/components/responses/8f0a2ecfadf01a857ca8cf1a43a83f88"
+            "$ref": "#/components/responses/1cb4ee678fb295a69d1b8b838d9083e8"
           },
           "403": {
-            "$ref": "#/components/responses/9b5851d171b6728776edc032e451af5c"
+            "$ref": "#/components/responses/4b196be8ee9c95dd2ae7ec36d683ff51"
           }
         },
         "security": [
@@ -540,24 +580,24 @@
         "operationId": "index_api_v1_scrape",
         "parameters": [
           {
-            "$ref": "#/components/parameters/bd66bf6c59f2f48d143fad774489d32e"
+            "$ref": "#/components/parameters/46c874eb54b68c49f5c9a4e23bb09e95"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/0c3df436487c8a3af3c1091e05d523a1"
+            "$ref": "#/components/responses/c3521cb53ce53e23cc221f5a9cbb3e23"
           },
           "422": {
-            "$ref": "#/components/responses/bb75ba235748d99ca7b9187e5fd375ec"
+            "$ref": "#/components/responses/cd7c702f7fc6d1f783085f6884a8db76"
           },
           "500": {
-            "$ref": "#/components/responses/95c6dcbfd457a2e8c35433b2f9cfdc2b"
+            "$ref": "#/components/responses/38b29d3c5ad25ee68c3e24f7f005b9d1"
           },
           "200": {
-            "$ref": "#/components/responses/e7558768edc82ee42157f2931e5ffd90"
+            "$ref": "#/components/responses/5f3cfa6a41aafc1c902350360e7bafdf"
           },
           "403": {
-            "$ref": "#/components/responses/726dfc1943f06befee8a48cb46c75916"
+            "$ref": "#/components/responses/ca5f44bab43cecb2153f26ece15ea854"
           }
         },
         "security": [
@@ -577,27 +617,27 @@
         "operationId": "index_api_v1_scrape_domain",
         "parameters": [
           {
-            "$ref": "#/components/parameters/e0845f7721d45dbb1d7b79821f1ebda8"
+            "$ref": "#/components/parameters/95595214234b59fdddf4a8943fdc44a8"
           },
           {
-            "$ref": "#/components/parameters/d6f7b773b3e38053c2cef92453535b34"
+            "$ref": "#/components/parameters/98aa6932d831a09579fe47f1f77e3b8c"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/19bec61c56cb6547c2703e943c350da9"
+            "$ref": "#/components/responses/81b2d2c9ecae25e660d4f7040606b79b"
           },
           "422": {
-            "$ref": "#/components/responses/d8b8ba3c81b965ee5f1ecf19253fcab7"
+            "$ref": "#/components/responses/07889aa273dd222ebd34f5bf8927f5ac"
           },
           "500": {
-            "$ref": "#/components/responses/cb396fb7dd71c28b88c2ebce7e03f446"
+            "$ref": "#/components/responses/b921bf4c2a156f4527ffc66918c11511"
           },
           "200": {
-            "$ref": "#/components/responses/eb3cb0b97497f45145252ca02b2d6b11"
+            "$ref": "#/components/responses/ccf8543162752a2dc7461de21dff022d"
           },
           "403": {
-            "$ref": "#/components/responses/ad32c38831f48ec28fca38aaca2a9d91"
+            "$ref": "#/components/responses/531cf9dccfdf6f87c964716d1f39e502"
           }
         },
         "security": [
@@ -617,30 +657,30 @@
         "operationId": "create_api_v1_scrape_js",
         "parameters": [
           {
-            "$ref": "#/components/parameters/bd66bf6c59f2f48d143fad774489d32e"
+            "$ref": "#/components/parameters/46c874eb54b68c49f5c9a4e23bb09e95"
           },
           {
-            "$ref": "#/components/parameters/b6918c860b4721b55ce38c237c9fa7e1"
+            "$ref": "#/components/parameters/f73988b7ab265026188735be680e07c6"
           }
         ],
         "requestBody": {
-          "$ref": "#/components/requestBodies/4b4a2ffc56f212134d77e55d87ac56fa"
+          "$ref": "#/components/requestBodies/2a9cee832449ef70c5fb86bbcd82a167"
         },
         "responses": {
           "401": {
-            "$ref": "#/components/responses/b42717eb9e31d9a53f587aa777bcc635"
+            "$ref": "#/components/responses/12f453dc0aa2ed1e644d4a9f1082d16f"
           },
           "422": {
-            "$ref": "#/components/responses/19c4d1ee35f28d961e11fe0b04167743"
+            "$ref": "#/components/responses/995d645c53d7fa9fc406248fdcad636d"
           },
           "500": {
-            "$ref": "#/components/responses/ffdcd1f192f5c15172e11d390634cf5b"
+            "$ref": "#/components/responses/30220f5bd1dcee0fc1dd192ca4e13728"
           },
           "200": {
-            "$ref": "#/components/responses/e32dfc9a3655ccaad1e57c103a2b46b5"
+            "$ref": "#/components/responses/0fc18e983c9caf64d19ed8fe0f1243d2"
           },
           "403": {
-            "$ref": "#/components/responses/97165f2c5fbbba2d7807fe615baee64b"
+            "$ref": "#/components/responses/3784359ac24ddd6b252b2dd93beea043"
           }
         },
         "security": [
@@ -660,33 +700,33 @@
         "operationId": "create_api_v1_scrape_js_with_proxy",
         "parameters": [
           {
-            "$ref": "#/components/parameters/bd66bf6c59f2f48d143fad774489d32e"
+            "$ref": "#/components/parameters/46c874eb54b68c49f5c9a4e23bb09e95"
           },
           {
-            "$ref": "#/components/parameters/3d2464dd753a190140e7dfe7c4d637fa"
+            "$ref": "#/components/parameters/8acdd7dcf41ffa7c199095ec513408de"
           },
           {
-            "$ref": "#/components/parameters/b6918c860b4721b55ce38c237c9fa7e1"
+            "$ref": "#/components/parameters/f73988b7ab265026188735be680e07c6"
           }
         ],
         "requestBody": {
-          "$ref": "#/components/requestBodies/0b7456ec3caf205a958b12a9e3c4f3af"
+          "$ref": "#/components/requestBodies/25b502e07f68baa4cdccd93e13dbfed1"
         },
         "responses": {
           "401": {
-            "$ref": "#/components/responses/73f4d44d4a4d2854dc8c60d8c1d93028"
+            "$ref": "#/components/responses/5d979bd0c053048205bc4ba3e329617a"
           },
           "422": {
-            "$ref": "#/components/responses/4868ffc0f2390d5ffafdf8f0a678815f"
+            "$ref": "#/components/responses/f97943f518b86600ce2e090e6b1dba49"
           },
           "500": {
-            "$ref": "#/components/responses/eb2af7a71876202bfa9f46cec218d6de"
+            "$ref": "#/components/responses/44429666078d81208c5448e3aebaab18"
           },
           "200": {
-            "$ref": "#/components/responses/c906664f9a8dfe56494959b82374ef0e"
+            "$ref": "#/components/responses/b3119ac2bb1e1fed563d3f23c7143efd"
           },
           "403": {
-            "$ref": "#/components/responses/394637cbea9f521e86fe6dd7ca1f2c63"
+            "$ref": "#/components/responses/f21c5e28ca2e73e87a6ed9c07bd45c8f"
           }
         },
         "security": [
@@ -706,54 +746,54 @@
         "operationId": "index_api_v1_serp",
         "parameters": [
           {
-            "$ref": "#/components/parameters/b29728c77c0b2bdb1a85de9da3046d10"
+            "$ref": "#/components/parameters/32aa60a30e3320137f3d09f779431245"
           },
           {
-            "$ref": "#/components/parameters/b4a68c9940a2817cf1cffbc9781a0681"
+            "$ref": "#/components/parameters/82684a02ea93b9c2e9c9bf4011448b55"
           },
           {
-            "$ref": "#/components/parameters/9c5679019fc63abf00a7a6b05e6ead59"
+            "$ref": "#/components/parameters/9ccc3be88a72c474df2eefc3b72e81d4"
           },
           {
-            "$ref": "#/components/parameters/f1227a93e97a5bbf4621ae84fbc94c6b"
+            "$ref": "#/components/parameters/412f4eaf7b6d0c834d0c456653165400"
           },
           {
-            "$ref": "#/components/parameters/315a89e771a6ebd4259efcff8ad180ba"
+            "$ref": "#/components/parameters/ef6629bad38f714f28afe8416fb598fb"
           },
           {
-            "$ref": "#/components/parameters/d74022a6c0699f96ca8f5b71e4ae8af7"
+            "$ref": "#/components/parameters/10d5c888514595e56838d39024459dda"
           },
           {
-            "$ref": "#/components/parameters/bea29f47d66087c795ffab4c118be2d2"
+            "$ref": "#/components/parameters/0e8c2ecb667d12129f7c25c452e8bea8"
           },
           {
-            "$ref": "#/components/parameters/bd4787586e4ef57dd38f02b5774f1871"
+            "$ref": "#/components/parameters/2dad2f8d14e0dd4e46dd165be31b3140"
           },
           {
-            "$ref": "#/components/parameters/e23f08efeac3151af7f4144b60eba899"
+            "$ref": "#/components/parameters/c1b0de989cc2b81b6bb8382f1e4efff1"
           },
           {
-            "$ref": "#/components/parameters/161c7375875895e0a4f59a2447c64cd1"
+            "$ref": "#/components/parameters/0f9b986b2f997008265ac9453aee456a"
           },
           {
-            "$ref": "#/components/parameters/4e63aeb62001dcd4013106ceaa0daf19"
+            "$ref": "#/components/parameters/8c51804fc85bb39529fd2b3d26f49c5a"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/823617c9c796ff66d768ae11baf03694"
+            "$ref": "#/components/responses/b4d1fb108bbe86ad024967a4286ed69a"
           },
           "422": {
-            "$ref": "#/components/responses/17dfb17ed0badb5cab30d2f37750881f"
+            "$ref": "#/components/responses/5c152b1740f5af7e9e4ff29155c98455"
           },
           "500": {
-            "$ref": "#/components/responses/14e9e03354e0106701a3179ae55c10e7"
+            "$ref": "#/components/responses/0466dcc24aed86fecaf900ad7818cb21"
           },
           "200": {
-            "$ref": "#/components/responses/e077a4afe279f310782c30ed32536901"
+            "$ref": "#/components/responses/6d5dcf2d0102b3a70556ed2992fc3009"
           },
           "403": {
-            "$ref": "#/components/responses/90ef6fb6dec9dd072682f06ea03519ef"
+            "$ref": "#/components/responses/7ff117d41b48f41d426e2b918a0bc095"
           }
         },
         "security": [
@@ -773,27 +813,27 @@
         "operationId": "index_api_v1_serp_ai",
         "parameters": [
           {
-            "$ref": "#/components/parameters/b29728c77c0b2bdb1a85de9da3046d10"
+            "$ref": "#/components/parameters/32aa60a30e3320137f3d09f779431245"
           },
           {
-            "$ref": "#/components/parameters/9c5679019fc63abf00a7a6b05e6ead59"
+            "$ref": "#/components/parameters/9ccc3be88a72c474df2eefc3b72e81d4"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/89185e1453d4cdbe6013e220c7e1ba1d"
+            "$ref": "#/components/responses/469b4283d622ca28342f134d9e30ce16"
           },
           "422": {
-            "$ref": "#/components/responses/2fed930add4c8f32466065645742317d"
+            "$ref": "#/components/responses/d5f07c2c218705d45990f69b7f652575"
           },
           "500": {
-            "$ref": "#/components/responses/12b699aed9a7f36edb71db90ca4a0b1a"
+            "$ref": "#/components/responses/fb69dd99dcbbfd363b4942d515fc02cd"
           },
           "200": {
-            "$ref": "#/components/responses/a092b25ddc26ebbfbf8bd95cd833397e"
+            "$ref": "#/components/responses/386b114e50575f6a89cedd906eca77c7"
           },
           "403": {
-            "$ref": "#/components/responses/de87ed3d683cc5cbd6cad82f7842feca"
+            "$ref": "#/components/responses/9117c7513ebb1d691ab98dee833314c3"
           }
         },
         "security": [
@@ -813,27 +853,27 @@
         "operationId": "show_api_v1_serp_ai_uuid",
         "parameters": [
           {
-            "$ref": "#/components/parameters/8e25b3c523b4c42d30dae1e6c378db7e"
+            "$ref": "#/components/parameters/25bb15bcf19400f2643acd2f92ddd80b"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/c216855c1631ebfc7b7f8c8d4d85f37f"
+            "$ref": "#/components/responses/858d93ea102dd94f06fd66dccf068435"
           },
           "422": {
-            "$ref": "#/components/responses/c947addd5133a9d602cb6cbe8719845b"
+            "$ref": "#/components/responses/7ca6cb1bbcde3902cbd8dffc8b9f7603"
           },
           "500": {
-            "$ref": "#/components/responses/80ea11239150cab65d240e9414eb084e"
+            "$ref": "#/components/responses/313c4a75961402925c6c846951f27455"
           },
           "200": {
-            "$ref": "#/components/responses/1f9037ad1ea0b35c4f606dfaf560699e"
+            "$ref": "#/components/responses/e78c689a29d7b4d2125c6f0f7c48b496"
           },
           "404": {
-            "$ref": "#/components/responses/12b3dd6f088c5f01c75be847c2a41a76"
+            "$ref": "#/components/responses/1f6e85226f00744d0169a211bf2426da"
           },
           "403": {
-            "$ref": "#/components/responses/5dcf539bfe17de7361721eff881d3aaf"
+            "$ref": "#/components/responses/a4984a9c7fe1ddad89c17711ae4139c6"
           }
         },
         "security": [
@@ -853,27 +893,27 @@
         "operationId": "index_api_v1_serp_ai_mode",
         "parameters": [
           {
-            "$ref": "#/components/parameters/b29728c77c0b2bdb1a85de9da3046d10"
+            "$ref": "#/components/parameters/32aa60a30e3320137f3d09f779431245"
           },
           {
-            "$ref": "#/components/parameters/9c5679019fc63abf00a7a6b05e6ead59"
+            "$ref": "#/components/parameters/9ccc3be88a72c474df2eefc3b72e81d4"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/f709e893cf10b26ba02d7026e3b2e4d0"
+            "$ref": "#/components/responses/63d2f91e81d4fd813ddbd268998b3d9d"
           },
           "422": {
-            "$ref": "#/components/responses/b478fd005c31f2554eac0874829c4b88"
+            "$ref": "#/components/responses/4b9758a1b172ab982f7255c601b92987"
           },
           "500": {
-            "$ref": "#/components/responses/f8d7951af81b671437a3f67bff5180a9"
+            "$ref": "#/components/responses/98d9722b482fe1008bcba4f3c84c7d92"
           },
           "200": {
-            "$ref": "#/components/responses/3cbbbd86e4dea2c2101d1d2b3dc24d03"
+            "$ref": "#/components/responses/da5e4dca381dd908bf5d3eb45bba2371"
           },
           "403": {
-            "$ref": "#/components/responses/b63d5b02397065649af35aa60dd18ca6"
+            "$ref": "#/components/responses/4b9c9e85e6d1166513eb18da91c18f2a"
           }
         },
         "security": [
@@ -893,45 +933,45 @@
         "operationId": "index_api_v1_serp_html",
         "parameters": [
           {
-            "$ref": "#/components/parameters/b29728c77c0b2bdb1a85de9da3046d10"
+            "$ref": "#/components/parameters/32aa60a30e3320137f3d09f779431245"
           },
           {
-            "$ref": "#/components/parameters/b4a68c9940a2817cf1cffbc9781a0681"
+            "$ref": "#/components/parameters/82684a02ea93b9c2e9c9bf4011448b55"
           },
           {
-            "$ref": "#/components/parameters/9c5679019fc63abf00a7a6b05e6ead59"
+            "$ref": "#/components/parameters/9ccc3be88a72c474df2eefc3b72e81d4"
           },
           {
-            "$ref": "#/components/parameters/f1227a93e97a5bbf4621ae84fbc94c6b"
+            "$ref": "#/components/parameters/412f4eaf7b6d0c834d0c456653165400"
           },
           {
-            "$ref": "#/components/parameters/e10c3fdd4f57fa97d9ef353a5c5f43fb"
+            "$ref": "#/components/parameters/db85e305cb3bdcce5bf5ac95af5fb5fe"
           },
           {
-            "$ref": "#/components/parameters/d74022a6c0699f96ca8f5b71e4ae8af7"
+            "$ref": "#/components/parameters/10d5c888514595e56838d39024459dda"
           },
           {
-            "$ref": "#/components/parameters/bea29f47d66087c795ffab4c118be2d2"
+            "$ref": "#/components/parameters/0e8c2ecb667d12129f7c25c452e8bea8"
           },
           {
-            "$ref": "#/components/parameters/bd4787586e4ef57dd38f02b5774f1871"
+            "$ref": "#/components/parameters/2dad2f8d14e0dd4e46dd165be31b3140"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/236136c86e3ca09af616d1877ac0de38"
+            "$ref": "#/components/responses/949fb8c908b31461a531eed582628f5d"
           },
           "422": {
-            "$ref": "#/components/responses/f08ae06f14d3a6d777cbb01e0036c405"
+            "$ref": "#/components/responses/e8f9c55a5c8728af9020fba40b5e1b0c"
           },
           "500": {
-            "$ref": "#/components/responses/17a6a30386462a2f35f12a4141dd521b"
+            "$ref": "#/components/responses/070fc587e914577ffbcde70794adaca3"
           },
           "200": {
-            "$ref": "#/components/responses/38066dc0d8a023e4e97e1014bf87ebbc"
+            "$ref": "#/components/responses/a54b5cf7dd56831c13dfb9f0da216736"
           },
           "403": {
-            "$ref": "#/components/responses/51ae12d859836c9f17a449566b94a01d"
+            "$ref": "#/components/responses/b2d16397c42fa68b3c438d43a9b53fda"
           }
         },
         "security": [
@@ -951,30 +991,30 @@
         "operationId": "index_api_v1_serp_js",
         "parameters": [
           {
-            "$ref": "#/components/parameters/b29728c77c0b2bdb1a85de9da3046d10"
+            "$ref": "#/components/parameters/32aa60a30e3320137f3d09f779431245"
           },
           {
-            "$ref": "#/components/parameters/9c5679019fc63abf00a7a6b05e6ead59"
+            "$ref": "#/components/parameters/9ccc3be88a72c474df2eefc3b72e81d4"
           },
           {
-            "$ref": "#/components/parameters/bb40bd367b30b348c8c438e5a886c227"
+            "$ref": "#/components/parameters/92451534c4076d0f962635927f65243a"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/c5e3aae72e22ff0b91310719bc20ce03"
+            "$ref": "#/components/responses/6f16d3ca17889025eb7f47ec160eda62"
           },
           "422": {
-            "$ref": "#/components/responses/e13fcc24f62aa53363a30f7a148e6899"
+            "$ref": "#/components/responses/47fa0ae67e2cffe43786911fdc18e3ff"
           },
           "500": {
-            "$ref": "#/components/responses/57bb0846b3d23a0fc7cce90281b13a48"
+            "$ref": "#/components/responses/570222dc37f59604b8d044f4e8f9559e"
           },
           "200": {
-            "$ref": "#/components/responses/8bddf9622e4659b7686236e20e3486fc"
+            "$ref": "#/components/responses/1be4a508428516f88645a52750935525"
           },
           "403": {
-            "$ref": "#/components/responses/a47c80c43f4981a5731a9374dbf8cccf"
+            "$ref": "#/components/responses/4d295e8254b7d86bcbb906e8d72ff089"
           }
         },
         "security": [
@@ -994,27 +1034,27 @@
         "operationId": "show_api_v1_serp_js_uuid",
         "parameters": [
           {
-            "$ref": "#/components/parameters/8e25b3c523b4c42d30dae1e6c378db7e"
+            "$ref": "#/components/parameters/25bb15bcf19400f2643acd2f92ddd80b"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/f84a277596a907fea515aaff0877b127"
+            "$ref": "#/components/responses/001bbc6a23ef4f22f67ff7fc10397fdc"
           },
           "422": {
-            "$ref": "#/components/responses/440caddce42d6094ed925decdc5c6b8b"
+            "$ref": "#/components/responses/d03b5620708ebd0f0eb406de78c18ad9"
           },
           "500": {
-            "$ref": "#/components/responses/c17f65dd5444bf7cadc4a117b2711cdf"
+            "$ref": "#/components/responses/a6effbeb74610b90a6ff2349ac7bf017"
           },
           "200": {
-            "$ref": "#/components/responses/ac24c856a00c1acd3ed058ff782c47ba"
+            "$ref": "#/components/responses/edcd5f870d5df631f945e6c5b29081b5"
           },
           "404": {
-            "$ref": "#/components/responses/b28db3b885abf8ea771342978a724f02"
+            "$ref": "#/components/responses/f1db041fb86c946a1bd46600b2fe90c6"
           },
           "403": {
-            "$ref": "#/components/responses/72d6eb13fdd896b437801106b37ef4d8"
+            "$ref": "#/components/responses/8d5ec9c5666caf12a0d83adbd50f0a45"
           }
         },
         "security": [
@@ -1034,45 +1074,45 @@
         "operationId": "index_api_v1_serp_text",
         "parameters": [
           {
-            "$ref": "#/components/parameters/b29728c77c0b2bdb1a85de9da3046d10"
+            "$ref": "#/components/parameters/32aa60a30e3320137f3d09f779431245"
           },
           {
-            "$ref": "#/components/parameters/b4a68c9940a2817cf1cffbc9781a0681"
+            "$ref": "#/components/parameters/82684a02ea93b9c2e9c9bf4011448b55"
           },
           {
-            "$ref": "#/components/parameters/9c5679019fc63abf00a7a6b05e6ead59"
+            "$ref": "#/components/parameters/9ccc3be88a72c474df2eefc3b72e81d4"
           },
           {
-            "$ref": "#/components/parameters/f1227a93e97a5bbf4621ae84fbc94c6b"
+            "$ref": "#/components/parameters/412f4eaf7b6d0c834d0c456653165400"
           },
           {
-            "$ref": "#/components/parameters/e10c3fdd4f57fa97d9ef353a5c5f43fb"
+            "$ref": "#/components/parameters/db85e305cb3bdcce5bf5ac95af5fb5fe"
           },
           {
-            "$ref": "#/components/parameters/d74022a6c0699f96ca8f5b71e4ae8af7"
+            "$ref": "#/components/parameters/10d5c888514595e56838d39024459dda"
           },
           {
-            "$ref": "#/components/parameters/bea29f47d66087c795ffab4c118be2d2"
+            "$ref": "#/components/parameters/0e8c2ecb667d12129f7c25c452e8bea8"
           },
           {
-            "$ref": "#/components/parameters/bd4787586e4ef57dd38f02b5774f1871"
+            "$ref": "#/components/parameters/2dad2f8d14e0dd4e46dd165be31b3140"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/6770cc04b7e046cdb7d0bdd10fadb176"
+            "$ref": "#/components/responses/74dffaa3fc56c17604b898ba1710a16e"
           },
           "422": {
-            "$ref": "#/components/responses/cf9ea9c73a758d994a66a6f6b05f29a5"
+            "$ref": "#/components/responses/19da3584b2b08f9f3bfcff587dd36fb4"
           },
           "500": {
-            "$ref": "#/components/responses/a01ebba8abcfc28d1f6b7f05699883e4"
+            "$ref": "#/components/responses/5fe7ee483d2eb4eab50eaa76ff8e3c23"
           },
           "200": {
-            "$ref": "#/components/responses/2f183278a8cc7466602083a4fc7b5fce"
+            "$ref": "#/components/responses/9577404d2036d93e4098da2dac8dfca0"
           },
           "403": {
-            "$ref": "#/components/responses/9e4601975de968be1165ad60746a41be"
+            "$ref": "#/components/responses/74092237a74758eae67507d38b2b6150"
           }
         },
         "security": [
@@ -1092,13 +1132,13 @@
         "operationId": "index_api_v1_user",
         "responses": {
           "401": {
-            "$ref": "#/components/responses/3e986b2b075b33c10fd3d8b85263b9e9"
+            "$ref": "#/components/responses/d7ea983c2b7114dafbc5ece8fdb349de"
           },
           "200": {
-            "$ref": "#/components/responses/360e82d0a2cfa1a2e34a2f4a9527437a"
+            "$ref": "#/components/responses/b1b0947061894af3ac2693080357ff78"
           },
           "403": {
-            "$ref": "#/components/responses/b4990207ca2a1e5365812b615b1af3d5"
+            "$ref": "#/components/responses/7243842bbc7239f61b401be0211c7da3"
           }
         },
         "security": [
@@ -1118,27 +1158,27 @@
         "operationId": "index_api_v1_web_page_ai_analysis",
         "parameters": [
           {
-            "$ref": "#/components/parameters/f8f09a57d731547e6d17e18e88c911fe"
+            "$ref": "#/components/parameters/e37f03b868a98e8db61771029e8fe368"
           },
           {
-            "$ref": "#/components/parameters/51ef2b8886208a3bbf6df0e30e1ae059"
+            "$ref": "#/components/parameters/3f0a87b577e6f932c1489080692d7ca7"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/225402d566b78853e20dff9c69a0783a"
+            "$ref": "#/components/responses/dc59dac221369a13295dc0630839ad0b"
           },
           "422": {
-            "$ref": "#/components/responses/a27fb9574df4170bf5c65c020b77a319"
+            "$ref": "#/components/responses/985057e98c559c72f6f8ce0e22a04963"
           },
           "500": {
-            "$ref": "#/components/responses/266260bec915d345d063f32615dd9672"
+            "$ref": "#/components/responses/a7f8f2706a3c3bd6c9fd18ee3b5c5fd1"
           },
           "200": {
-            "$ref": "#/components/responses/779a2610946daffeb8d7bf0add6ae311"
+            "$ref": "#/components/responses/bc0c09c773f7e9a6a84af2f0f185b84a"
           },
           "403": {
-            "$ref": "#/components/responses/b35b567d4a77d1c28a18f7a31964d91a"
+            "$ref": "#/components/responses/77e235fa0f9484d9892b0f7b62300d9e"
           }
         },
         "security": [
@@ -1158,24 +1198,24 @@
         "operationId": "index_api_v1_web_page_seo_analysis",
         "parameters": [
           {
-            "$ref": "#/components/parameters/f8f09a57d731547e6d17e18e88c911fe"
+            "$ref": "#/components/parameters/e37f03b868a98e8db61771029e8fe368"
           }
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/b974ac24e0503d9441c745b101daa357"
+            "$ref": "#/components/responses/f8ba51bef4fe2b62be4b77b19569041f"
           },
           "422": {
-            "$ref": "#/components/responses/b1f92665433970f6052f01ffd251761e"
+            "$ref": "#/components/responses/90bd664cda7d8aafbb013ea0ef9a67c3"
           },
           "500": {
-            "$ref": "#/components/responses/b57cea19a1c0f9c2cf460a79144661b5"
+            "$ref": "#/components/responses/ebba91688f0035a28fc0a58824da4871"
           },
           "200": {
-            "$ref": "#/components/responses/d7f932c65090190f26d56af7714b11c3"
+            "$ref": "#/components/responses/f76580191ed0f7a8331a7a3993c3139a"
           },
           "403": {
-            "$ref": "#/components/responses/c6a8c2537a344f0b4a29f34dc6bb4522"
+            "$ref": "#/components/responses/321520c765ac8239cc80f64641b9be15"
           }
         },
         "security": [
@@ -1188,32 +1228,32 @@
   },
   "components": {
     "requestBodies": {
-      "4b4a2ffc56f212134d77e55d87ac56fa": {
+      "2a9cee832449ef70c5fb86bbcd82a167": {
         "description": "The payload to send",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/de0b0f0356db9da97e216bb8fde78f1a"
+              "$ref": "#/components/schemas/2dc313672d65343cfd570924d0bd602a"
             },
             "examples": {
               "an_example_payload": {
-                "$ref": "#/components/examples/65d0eccb6e55c4c034fa4fba3c6a7527"
+                "$ref": "#/components/examples/267976adcc43a028fa81d610e95758e4"
               }
             }
           }
         },
         "required": true
       },
-      "0b7456ec3caf205a958b12a9e3c4f3af": {
+      "25b502e07f68baa4cdccd93e13dbfed1": {
         "description": "The payload to send",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/de0b0f0356db9da97e216bb8fde78f1a"
+              "$ref": "#/components/schemas/2dc313672d65343cfd570924d0bd602a"
             },
             "examples": {
               "an_example_payload": {
-                "$ref": "#/components/examples/65d0eccb6e55c4c034fa4fba3c6a7527"
+                "$ref": "#/components/examples/267976adcc43a028fa81d610e95758e4"
               }
             }
           }
@@ -1222,7 +1262,7 @@
       }
     },
     "examples": {
-      "65d0eccb6e55c4c034fa4fba3c6a7527": {
+      "267976adcc43a028fa81d610e95758e4": {
         "summary": "An example payload",
         "value": {
           "url": "https://fetchserp.com",
@@ -1231,1319 +1271,1359 @@
       }
     },
     "responses": {
-      "30c2e76ee2cbe108fe07b9edc66d5731": {
+      "a93bd9bcae77a5f7559a5bb6a941468e": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "68a8e37dbcd6af921f6abca754058ad0": {
+      "b2b709d0cdf0c8955fbcfc89469e1698": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "aa89ef42cfa9f64044403932492cf6d6": {
+      "f277ef6c75cce90c6bd32d9ceb58dcec": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "cdb8596152989bb86af84f0748a3ac2a": {
+      "d1fe516663db5363be38cf0ddabda548": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/6f8905419a1eb951cb667fe7461e4d10"
+              "$ref": "#/components/schemas/56f4dba1f8eb6e0b53abb76e4b1a1528"
             }
           }
         }
       },
-      "d7e809e073148d794f27fb789db2bbe9": {
+      "5c7775c1669a18c0106d3f8621fc53c9": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "230062febfcf53cc1a17e49a1d213e2a": {
+      "edb64fd04c0bbc7c4b215f1663c9c7f9": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "cc7ad3ab262b2a2b664b7a48c303eb0b": {
+      "a851b1a892e048689fd77528cd30bb2d": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "b51b5300454bb5fca4c0f3619032caff": {
+      "95e0ea4a1222ad94ca6def972fadd378": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "2df87884c9aad50e36d85b5640e69f18": {
+      "efd306c6f6c894c8e8b53447cc72a66f": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/c6aed49955bf550c645ca486ebab3199"
+              "$ref": "#/components/schemas/bb31fe994ce54e9391daffa7dea5b924"
             }
           }
         }
       },
-      "bd1121db302d2e67255bae9a365fed67": {
+      "ebfa25e007419df500a367344181918a": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "3dc7786bff8be4968c75c1c31a467de2": {
+      "abce9eb2ad79ef94dcfce145643c847d": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "0de60c265ca75ed2aa7ef8b9cc672baf": {
+      "b8f1580714e31df136a5137695f73046": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "618621f3bedd050a1ebee484239e6ac0": {
+      "6c4fbbc6b231f159a9ad3eb48ee466ca": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "c1e1c81ea0379ab04f3ea3dc9784d319": {
+      "2c06124bb57e0e500b9ad60b5ffcb7fb": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/c3bde990034d23b2a722273337242f7a"
+              "$ref": "#/components/schemas/e34aad12acf8c9198896514877c345e1"
             }
           }
         }
       },
-      "a7bb2e1fba4608f860e1108556b17c05": {
+      "6e1ea9b2b056a7031c122409232f5ce4": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "208f43aa05760e98779aaad017f2565c": {
+      "e5c1d5d9bbbb8cded80f0ca71b53ceb8": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/aa527cc510b42067239a5ea9ee1a02f9"
+              "$ref": "#/components/schemas/3dff8793e5365ed1b44c7d67271ea823"
             }
           }
         }
       },
-      "939de32ae74a97aa40d47ea0ce6faf08": {
+      "cef01ae2b5a12635b4ad6a185783e1f6": {
         "description": "You are not authorized to access this resource. You need to authenticate yourself first.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "754c2b2062408f71bccff5df24694a40": {
+      "1297c7df63291f085133dc9ffde51ffb": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "3f0a1c6cfbfd0aa598e445d1a3eed01a": {
+      "2b7c700a11e2813a900ea330a7d5f236": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/569aa3236251d37316d8642fbcd6c00b"
+              "$ref": "#/components/schemas/297dbd107f6426ee95c5b4f5caa0629a"
             }
           }
         }
       },
-      "3ea9989d2947de20f4d93a01cb9ee6bf": {
+      "e2c091d07320d71b8c9f7d85e16f6c71": {
         "description": "You are not authorized to access this resource. You need to authenticate yourself first.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "9b7b11c24d0d6ec60d438db001b908ff": {
+      "5fd4c96781f70995cca6db55ed5f3db0": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "011a37ada47b1443d490610a3323a2df": {
+      "601b134b5b051845782bbb4f20bdc827": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "cb345d87de049be0c24d4d2ea0e7dad3": {
+      "1b5a10a7fc85e914d3e43922bf30417d": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "746f73307e58b14207decbb6d49ac7f3": {
+      "c9024952169602557d888cab880f6393": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "9a5bb1275f991c2581d500a72cd17aec": {
+      "70287a1f30bedb630f347d6eb2d23705": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/eae1f3e6a1cfa36f797bb25fbb6c4b84"
+              "$ref": "#/components/schemas/546f74e02f08169efebb54c3af95e4e3"
             }
           }
         }
       },
-      "2a104f88cf2f85600dd42f08bf881dda": {
+      "81fcba23419fcdb4eaf12ad44ad41854": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "767043e437148e9e4bd18e9966fd7885": {
+      "f636af961bd02f2dc3ff2abda8bb0611": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "7a17b50b147d57ba689f159ab024e628": {
+      "346f869572ef51d5b9eab3d6a3f46d41": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "75958c5260934a78fa7b37f84e005433": {
+      "1a8ec6f283e8c19dea1243acb50883ec": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "441c7490bf2254774f7dd452b90161fa": {
+      "1ff47801ad9b38e458d52522647cb8bb": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/1cebb7b6f380af614ca53c4ac99f0dc2"
+              "$ref": "#/components/schemas/6a46f09933349cf40ae753ffc3eb57d9"
             }
           }
         }
       },
-      "f024e3cb58444cf4e97ddfc3dfb25a24": {
+      "182637d6c52b7a7604429e1eea2b2a5f": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "192dd5179d8ba9c6604fd5e5abc8334c": {
+      "8914c98e3ba37dc36b16e721f86fe52c": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "171427e2e9be39b73627f24c3d1a7b1f": {
+      "ebfdcc92cdd9f33caf4161182a99ba88": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "68409566db226392a05630d5b8beb1e5": {
-        "description": "Validation errors",
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
-            }
-          }
-        }
-      },
-      "fe44f9363e1db460ed69dc49f17acc1b": {
+      "a90422450e9104cc43fa412db111509f": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/0b22856b372c2963785ed86d1c7657da"
+              "$ref": "#/components/schemas/5f439210de6f5b40d459b6b6444eb40a"
             }
           }
         }
       },
-      "3411f25da1e6a0910d71a9596ce0da16": {
+      "db6c00b0fc58e54768d48e8b79e7a564": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "3c24817dc7e74d1cb2bed44a4b1ed926": {
+      "10954527fd00d535ee51b044b1628226": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "83cf9d82f097618cd7a190e5c28b1835": {
+      "4e720a783dd548a5476dae6d1b5a23c0": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "8c33dc74dc90034f5e96599df15302d9": {
+      "bfd0467171c7297342c04525fd343fcb": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "7999be11993287a4a79c72fd4dfc227c": {
+      "1dc114ef7bd795b1d27e6f3ff8550ba2": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/95bb2b063cd814b8e2847c0e08e1b690"
+              "$ref": "#/components/schemas/b8f9f7d39e2a4c27959e2354604ec064"
             }
           }
         }
       },
-      "aaf672aee2beae6ae65798963acdcada": {
+      "2de60c38c0f7bb15e8731eb565905a4f": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "09cb4c4b2ccc1154f59c2a2819530d2a": {
+      "80a31a5a3e34962463246cc512e9d39d": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "61430294a8d81b0428dc2c869f7c42c1": {
+      "1d83ec9b88868e76a60347c991ec676c": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "f0218dba4568ef73b1d67d015e8c5e51": {
+      "71a0353bb216e1277e21a91e9c0ccb84": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "d76bf8565594c525bcb21d2f0581527c": {
+      "76dc73c48c2cb3fbffe803b0038a1669": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/496b2fd25d1034476658cb29ddd8a147"
+              "$ref": "#/components/schemas/f6e06215681fc0d13bc446c02f49ecc1"
             }
           }
         }
       },
-      "275c2d5480c5aa473294f048ed10d2b3": {
+      "17ec37cd0cc746907a9b78429d0b906d": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "7ecd78f1f09fdab3a31ea847902f33c0": {
+      "27536bb3d6b0b8c87b58453f01b388f5": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "dc12ebd72ce8c87114fcd5ff6bf95a5b": {
+      "a897657704b40912a117c26f28ea7ec4": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "c2a03e86b8fb5875cfd46a7af2781f22": {
+      "dcc761eb969c543eaa38d88687c5ee44": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "34b49189d03018f9c40c9a335efe9e09": {
+      "d448101ad4bfddf262149c08dbae2f92": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/1e4631c418df6fac98fc296ca2c8f73b"
+              "$ref": "#/components/schemas/16e028a1558daa6ad88483af5395d69f"
             }
           }
         }
       },
-      "ca34d4249e9e8dee89a787c79787ae72": {
+      "cf9bb8faa708469732aed995ad48dc36": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "2488469ea539dada240ab70d95f9536d": {
+      "a15653ba9595b7d6f07fc10346f68d13": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "4813e0939a77bcba8adbc772c0b57d13": {
+      "77a349bdb09a071f00dd90cdab8677d1": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "f35f56548aabab26f1a6d93c6c5a6b32": {
+      "3e36bc45a8d4307237f3e3b89d2b78e3": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "8f0a2ecfadf01a857ca8cf1a43a83f88": {
+      "f6d75ca89e68c715c78d3a999a5495e2": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/a63997b4fe50a49ab938ef19bdaf1bea"
+              "$ref": "#/components/schemas/d78eefa9604b5f579a2af35801fa358d"
             }
           }
         }
       },
-      "9b5851d171b6728776edc032e451af5c": {
+      "b50eed768b217c6b44a47363c7e64a98": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "0c3df436487c8a3af3c1091e05d523a1": {
+      "340322023d81356e3c7545b87176f461": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "bb75ba235748d99ca7b9187e5fd375ec": {
+      "8ef6eff228d7d7134f7805bd169425ce": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "95c6dcbfd457a2e8c35433b2f9cfdc2b": {
+      "86b612f55c9b1aa6568977905b28dfa6": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "e7558768edc82ee42157f2931e5ffd90": {
+      "1cb4ee678fb295a69d1b8b838d9083e8": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/6c27b415ef5a3d0a1aecfd1d12617f22"
+              "$ref": "#/components/schemas/85eb56d3dad91fa4d137e4e340e64ba0"
             }
           }
         }
       },
-      "726dfc1943f06befee8a48cb46c75916": {
+      "4b196be8ee9c95dd2ae7ec36d683ff51": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "19bec61c56cb6547c2703e943c350da9": {
+      "c3521cb53ce53e23cc221f5a9cbb3e23": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "d8b8ba3c81b965ee5f1ecf19253fcab7": {
+      "cd7c702f7fc6d1f783085f6884a8db76": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "cb396fb7dd71c28b88c2ebce7e03f446": {
+      "38b29d3c5ad25ee68c3e24f7f005b9d1": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "eb3cb0b97497f45145252ca02b2d6b11": {
+      "5f3cfa6a41aafc1c902350360e7bafdf": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/47ad16874f0791de9f3d9da9e77657cc"
+              "$ref": "#/components/schemas/b9660101f30d3ae5bb7db97adccf4000"
             }
           }
         }
       },
-      "ad32c38831f48ec28fca38aaca2a9d91": {
+      "ca5f44bab43cecb2153f26ece15ea854": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "b42717eb9e31d9a53f587aa777bcc635": {
+      "81b2d2c9ecae25e660d4f7040606b79b": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "19c4d1ee35f28d961e11fe0b04167743": {
+      "07889aa273dd222ebd34f5bf8927f5ac": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "ffdcd1f192f5c15172e11d390634cf5b": {
+      "b921bf4c2a156f4527ffc66918c11511": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "e32dfc9a3655ccaad1e57c103a2b46b5": {
+      "ccf8543162752a2dc7461de21dff022d": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/6247306b95c0f269acad34b406304042"
+              "$ref": "#/components/schemas/2dcabea8a352c9ae1d391d39aba650b8"
             }
           }
         }
       },
-      "97165f2c5fbbba2d7807fe615baee64b": {
+      "531cf9dccfdf6f87c964716d1f39e502": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "73f4d44d4a4d2854dc8c60d8c1d93028": {
+      "12f453dc0aa2ed1e644d4a9f1082d16f": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "4868ffc0f2390d5ffafdf8f0a678815f": {
+      "995d645c53d7fa9fc406248fdcad636d": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "eb2af7a71876202bfa9f46cec218d6de": {
+      "30220f5bd1dcee0fc1dd192ca4e13728": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "c906664f9a8dfe56494959b82374ef0e": {
+      "0fc18e983c9caf64d19ed8fe0f1243d2": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/70d4db71598d568797192360bfc6386e"
+              "$ref": "#/components/schemas/3dfa4f4b52ffaedee3e9ca2d528bc294"
             }
           }
         }
       },
-      "394637cbea9f521e86fe6dd7ca1f2c63": {
+      "3784359ac24ddd6b252b2dd93beea043": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "823617c9c796ff66d768ae11baf03694": {
+      "5d979bd0c053048205bc4ba3e329617a": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "17dfb17ed0badb5cab30d2f37750881f": {
+      "f97943f518b86600ce2e090e6b1dba49": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "14e9e03354e0106701a3179ae55c10e7": {
+      "44429666078d81208c5448e3aebaab18": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "e077a4afe279f310782c30ed32536901": {
+      "b3119ac2bb1e1fed563d3f23c7143efd": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/0988ea569e8651b75c87baf1e5b76856"
+              "$ref": "#/components/schemas/9c36a08341c451520885090433024fd2"
             }
           }
         }
       },
-      "90ef6fb6dec9dd072682f06ea03519ef": {
+      "f21c5e28ca2e73e87a6ed9c07bd45c8f": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "89185e1453d4cdbe6013e220c7e1ba1d": {
+      "b4d1fb108bbe86ad024967a4286ed69a": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "2fed930add4c8f32466065645742317d": {
+      "5c152b1740f5af7e9e4ff29155c98455": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "12b699aed9a7f36edb71db90ca4a0b1a": {
+      "0466dcc24aed86fecaf900ad7818cb21": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "a092b25ddc26ebbfbf8bd95cd833397e": {
+      "6d5dcf2d0102b3a70556ed2992fc3009": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/75a307bff20617fd15832dab517b49f8"
+              "$ref": "#/components/schemas/15561c50f3d1304528d11bcdb46a6978"
             }
           }
         }
       },
-      "de87ed3d683cc5cbd6cad82f7842feca": {
+      "7ff117d41b48f41d426e2b918a0bc095": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "c216855c1631ebfc7b7f8c8d4d85f37f": {
+      "469b4283d622ca28342f134d9e30ce16": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "c947addd5133a9d602cb6cbe8719845b": {
+      "d5f07c2c218705d45990f69b7f652575": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "80ea11239150cab65d240e9414eb084e": {
+      "fb69dd99dcbbfd363b4942d515fc02cd": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "1f9037ad1ea0b35c4f606dfaf560699e": {
+      "386b114e50575f6a89cedd906eca77c7": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/92317ebc104d12fa104b7ee666468fc2"
+              "$ref": "#/components/schemas/35a6837739561aa2c9ff9fed196e1e0f"
             }
           }
         }
       },
-      "12b3dd6f088c5f01c75be847c2a41a76": {
+      "9117c7513ebb1d691ab98dee833314c3": {
+        "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
+            }
+          }
+        }
+      },
+      "858d93ea102dd94f06fd66dccf068435": {
+        "description": "Validation errors",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
+            }
+          }
+        }
+      },
+      "7ca6cb1bbcde3902cbd8dffc8b9f7603": {
+        "description": "Validation errors",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
+            }
+          }
+        }
+      },
+      "313c4a75961402925c6c846951f27455": {
+        "description": "Validation errors",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
+            }
+          }
+        }
+      },
+      "e78c689a29d7b4d2125c6f0f7c48b496": {
+        "description": "success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/68fc33cdf75f621e55483e8588b8e993"
+            }
+          }
+        }
+      },
+      "1f6e85226f00744d0169a211bf2426da": {
         "description": "The requested resource could not be found.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "5dcf539bfe17de7361721eff881d3aaf": {
+      "a4984a9c7fe1ddad89c17711ae4139c6": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "f709e893cf10b26ba02d7026e3b2e4d0": {
+      "63d2f91e81d4fd813ddbd268998b3d9d": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "b478fd005c31f2554eac0874829c4b88": {
+      "4b9758a1b172ab982f7255c601b92987": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "f8d7951af81b671437a3f67bff5180a9": {
+      "98d9722b482fe1008bcba4f3c84c7d92": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "3cbbbd86e4dea2c2101d1d2b3dc24d03": {
+      "da5e4dca381dd908bf5d3eb45bba2371": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/6ae5c1b8e7ed10c3bf20534abdc987d7"
+              "$ref": "#/components/schemas/021e87b5da72d8d973372a023b6aa771"
             }
           }
         }
       },
-      "b63d5b02397065649af35aa60dd18ca6": {
+      "4b9c9e85e6d1166513eb18da91c18f2a": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "236136c86e3ca09af616d1877ac0de38": {
+      "949fb8c908b31461a531eed582628f5d": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "f08ae06f14d3a6d777cbb01e0036c405": {
+      "e8f9c55a5c8728af9020fba40b5e1b0c": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "17a6a30386462a2f35f12a4141dd521b": {
+      "070fc587e914577ffbcde70794adaca3": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "38066dc0d8a023e4e97e1014bf87ebbc": {
+      "a54b5cf7dd56831c13dfb9f0da216736": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/7e295863e63329281fb66c48cc39d4ba"
+              "$ref": "#/components/schemas/99cb1e092128307b8facf5c6547edfd6"
             }
           }
         }
       },
-      "51ae12d859836c9f17a449566b94a01d": {
+      "b2d16397c42fa68b3c438d43a9b53fda": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "c5e3aae72e22ff0b91310719bc20ce03": {
+      "6f16d3ca17889025eb7f47ec160eda62": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "e13fcc24f62aa53363a30f7a148e6899": {
+      "47fa0ae67e2cffe43786911fdc18e3ff": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "57bb0846b3d23a0fc7cce90281b13a48": {
+      "570222dc37f59604b8d044f4e8f9559e": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "8bddf9622e4659b7686236e20e3486fc": {
+      "1be4a508428516f88645a52750935525": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/75a307bff20617fd15832dab517b49f8"
+              "$ref": "#/components/schemas/35a6837739561aa2c9ff9fed196e1e0f"
             }
           }
         }
       },
-      "a47c80c43f4981a5731a9374dbf8cccf": {
+      "4d295e8254b7d86bcbb906e8d72ff089": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "f84a277596a907fea515aaff0877b127": {
+      "001bbc6a23ef4f22f67ff7fc10397fdc": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "440caddce42d6094ed925decdc5c6b8b": {
+      "d03b5620708ebd0f0eb406de78c18ad9": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "c17f65dd5444bf7cadc4a117b2711cdf": {
+      "a6effbeb74610b90a6ff2349ac7bf017": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "ac24c856a00c1acd3ed058ff782c47ba": {
+      "edcd5f870d5df631f945e6c5b29081b5": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/301b61c506d9e720bbf7e13c6900b988"
+              "$ref": "#/components/schemas/b31252f660ff8bca2e3419abc9492bad"
             }
           }
         }
       },
-      "b28db3b885abf8ea771342978a724f02": {
+      "f1db041fb86c946a1bd46600b2fe90c6": {
         "description": "The requested resource could not be found.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "72d6eb13fdd896b437801106b37ef4d8": {
+      "8d5ec9c5666caf12a0d83adbd50f0a45": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "6770cc04b7e046cdb7d0bdd10fadb176": {
+      "74dffaa3fc56c17604b898ba1710a16e": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "cf9ea9c73a758d994a66a6f6b05f29a5": {
+      "19da3584b2b08f9f3bfcff587dd36fb4": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "a01ebba8abcfc28d1f6b7f05699883e4": {
+      "5fe7ee483d2eb4eab50eaa76ff8e3c23": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "2f183278a8cc7466602083a4fc7b5fce": {
+      "9577404d2036d93e4098da2dac8dfca0": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/7e295863e63329281fb66c48cc39d4ba"
+              "$ref": "#/components/schemas/99cb1e092128307b8facf5c6547edfd6"
             }
           }
         }
       },
-      "9e4601975de968be1165ad60746a41be": {
+      "74092237a74758eae67507d38b2b6150": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "3e986b2b075b33c10fd3d8b85263b9e9": {
+      "d7ea983c2b7114dafbc5ece8fdb349de": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "360e82d0a2cfa1a2e34a2f4a9527437a": {
+      "b1b0947061894af3ac2693080357ff78": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/557ba9479e3b46f84d3de94101fdbac9"
+              "$ref": "#/components/schemas/b0fa8521c1e321226dfb35d181d8ee3a"
             }
           }
         }
       },
-      "b4990207ca2a1e5365812b615b1af3d5": {
+      "7243842bbc7239f61b401be0211c7da3": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "225402d566b78853e20dff9c69a0783a": {
+      "dc59dac221369a13295dc0630839ad0b": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "a27fb9574df4170bf5c65c020b77a319": {
+      "985057e98c559c72f6f8ce0e22a04963": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "266260bec915d345d063f32615dd9672": {
+      "a7f8f2706a3c3bd6c9fd18ee3b5c5fd1": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "779a2610946daffeb8d7bf0add6ae311": {
+      "bc0c09c773f7e9a6a84af2f0f185b84a": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/59738fabb3dde55ca973e63986a53fef"
+              "$ref": "#/components/schemas/e3b234b18c064b9f139e6c31c6bcb334"
             }
           }
         }
       },
-      "b35b567d4a77d1c28a18f7a31964d91a": {
+      "77e235fa0f9484d9892b0f7b62300d9e": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       },
-      "b974ac24e0503d9441c745b101daa357": {
+      "f8ba51bef4fe2b62be4b77b19569041f": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "b1f92665433970f6052f01ffd251761e": {
+      "90bd664cda7d8aafbb013ea0ef9a67c3": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ab7f8e96ffb786cb211cda6678d34532"
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
             }
           }
         }
       },
-      "b57cea19a1c0f9c2cf460a79144661b5": {
+      "ebba91688f0035a28fc0a58824da4871": {
         "description": "Validation errors",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/435c07a5c6b7754326b753df2f09dae3"
+              "$ref": "#/components/schemas/555048dfa1a2eef6cf92eb6be54763a0"
             }
           }
         }
       },
-      "d7f932c65090190f26d56af7714b11c3": {
+      "f76580191ed0f7a8331a7a3993c3139a": {
         "description": "success",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/1878d2ef42d59d234c05c2afacb36edd"
+              "$ref": "#/components/schemas/92eaf0c6d4c071cdd2bd0b85a68bacc5"
             }
           }
         }
       },
-      "c6a8c2537a344f0b4a29f34dc6bb4522": {
+      "321520c765ac8239cc80f64641b9be15": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/654dac096abf7f8a11eec3e814989da7"
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
             }
           }
         }
       }
     },
     "schemas": {
-      "ab7f8e96ffb786cb211cda6678d34532": {
+      "9d665ada07b74ee5119ec08992fb01eb": {
         "type": "object",
         "properties": {
           "error": {
@@ -2551,7 +2631,7 @@
           }
         }
       },
-      "435c07a5c6b7754326b753df2f09dae3": {
+      "555048dfa1a2eef6cf92eb6be54763a0": {
         "type": "object",
         "properties": {
           "status": {
@@ -2562,7 +2642,7 @@
           }
         }
       },
-      "6f8905419a1eb951cb667fe7461e4d10": {
+      "56f4dba1f8eb6e0b53abb76e4b1a1528": {
         "type": "object",
         "properties": {
           "data": {
@@ -2616,7 +2696,7 @@
           }
         }
       },
-      "654dac096abf7f8a11eec3e814989da7": {
+      "38bddf8128b086e90de170d98c730f6d": {
         "type": "object",
         "properties": {
           "success": {
@@ -2630,7 +2710,7 @@
           "success"
         ]
       },
-      "c6aed49955bf550c645ca486ebab3199": {
+      "bb31fe994ce54e9391daffa7dea5b924": {
         "type": "object",
         "properties": {
           "data": {
@@ -2646,7 +2726,7 @@
           }
         }
       },
-      "c3bde990034d23b2a722273337242f7a": {
+      "e34aad12acf8c9198896514877c345e1": {
         "type": "object",
         "properties": {
           "data": {
@@ -2814,7 +2894,7 @@
           }
         }
       },
-      "aa527cc510b42067239a5ea9ee1a02f9": {
+      "3dff8793e5365ed1b44c7d67271ea823": {
         "type": "object",
         "properties": {
           "data": {
@@ -2832,7 +2912,7 @@
           }
         }
       },
-      "569aa3236251d37316d8642fbcd6c00b": {
+      "297dbd107f6426ee95c5b4f5caa0629a": {
         "type": "object",
         "properties": {
           "data": {
@@ -2853,7 +2933,7 @@
           }
         }
       },
-      "eae1f3e6a1cfa36f797bb25fbb6c4b84": {
+      "546f74e02f08169efebb54c3af95e4e3": {
         "type": "object",
         "properties": {
           "data": {
@@ -2906,7 +2986,7 @@
           }
         }
       },
-      "1cebb7b6f380af614ca53c4ac99f0dc2": {
+      "6a46f09933349cf40ae753ffc3eb57d9": {
         "type": "object",
         "properties": {
           "data": {
@@ -2945,7 +3025,58 @@
           }
         }
       },
-      "0b22856b372c2963785ed86d1c7657da": {
+      "5f439210de6f5b40d459b6b6444eb40a": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "query": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "locations": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "latitude": {
+                      "type": "float"
+                    },
+                    "longitude": {
+                      "type": "float"
+                    },
+                    "timezone": {
+                      "type": "string"
+                    },
+                    "country_code": {
+                      "type": "string"
+                    },
+                    "postal_code": {
+                      "type": "string"
+                    },
+                    "population": {
+                      "type": "integer"
+                    },
+                    "geonameid": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "b8f9f7d39e2a4c27959e2354604ec064": {
         "type": "object",
         "properties": {
           "data": {
@@ -2956,7 +3087,7 @@
           }
         }
       },
-      "95bb2b063cd814b8e2847c0e08e1b690": {
+      "f6e06215681fc0d13bc446c02f49ecc1": {
         "type": "object",
         "properties": {
           "data": {
@@ -3158,7 +3289,7 @@
           }
         }
       },
-      "496b2fd25d1034476658cb29ddd8a147": {
+      "16e028a1558daa6ad88483af5395d69f": {
         "type": "object",
         "properties": {
           "data": {
@@ -3183,7 +3314,7 @@
           }
         }
       },
-      "1e4631c418df6fac98fc296ca2c8f73b": {
+      "d78eefa9604b5f579a2af35801fa358d": {
         "type": "object",
         "properties": {
           "data": {
@@ -3196,7 +3327,7 @@
           }
         }
       },
-      "a63997b4fe50a49ab938ef19bdaf1bea": {
+      "85eb56d3dad91fa4d137e4e340e64ba0": {
         "type": "object",
         "properties": {
           "data": {
@@ -3213,6 +3344,35 @@
               },
               "country": {
                 "type": "string"
+              },
+              "location": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "query": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "source": {
+                    "type": "string"
+                  },
+                  "latitude": {
+                    "type": "float"
+                  },
+                  "longitude": {
+                    "type": "float"
+                  },
+                  "timezone": {
+                    "type": "string"
+                  },
+                  "country_code": {
+                    "type": "string"
+                  }
+                }
               },
               "results": {
                 "type": "array",
@@ -3267,7 +3427,7 @@
           }
         }
       },
-      "6c27b415ef5a3d0a1aecfd1d12617f22": {
+      "b9660101f30d3ae5bb7db97adccf4000": {
         "type": "object",
         "properties": {
           "data": {
@@ -3285,7 +3445,7 @@
           }
         }
       },
-      "47ad16874f0791de9f3d9da9e77657cc": {
+      "2dcabea8a352c9ae1d391d39aba650b8": {
         "type": "object",
         "properties": {
           "domain": {
@@ -3310,7 +3470,7 @@
           }
         }
       },
-      "de0b0f0356db9da97e216bb8fde78f1a": {
+      "2dc313672d65343cfd570924d0bd602a": {
         "type": "object",
         "properties": {
           "url": {
@@ -3321,7 +3481,7 @@
           }
         }
       },
-      "6247306b95c0f269acad34b406304042": {
+      "3dfa4f4b52ffaedee3e9ca2d528bc294": {
         "type": "object",
         "properties": {
           "data": {
@@ -3342,7 +3502,7 @@
           }
         }
       },
-      "70d4db71598d568797192360bfc6386e": {
+      "9c36a08341c451520885090433024fd2": {
         "type": "object",
         "properties": {
           "data": {
@@ -3363,7 +3523,7 @@
           }
         }
       },
-      "0988ea569e8651b75c87baf1e5b76856": {
+      "15561c50f3d1304528d11bcdb46a6978": {
         "type": "object",
         "properties": {
           "data": {
@@ -3600,7 +3760,33 @@
                 "type": "string"
               },
               "location": {
-                "type": "string"
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "query": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "source": {
+                    "type": "string"
+                  },
+                  "latitude": {
+                    "type": "float"
+                  },
+                  "longitude": {
+                    "type": "float"
+                  },
+                  "timezone": {
+                    "type": "string"
+                  },
+                  "country_code": {
+                    "type": "string"
+                  }
+                }
               },
               "warnings": {
                 "type": "array",
@@ -3612,7 +3798,7 @@
           }
         }
       },
-      "75a307bff20617fd15832dab517b49f8": {
+      "35a6837739561aa2c9ff9fed196e1e0f": {
         "type": "object",
         "properties": {
           "data": {
@@ -3631,7 +3817,7 @@
           }
         }
       },
-      "92317ebc104d12fa104b7ee666468fc2": {
+      "68fc33cdf75f621e55483e8588b8e993": {
         "type": "object",
         "properties": {
           "data": {
@@ -3687,7 +3873,7 @@
           }
         }
       },
-      "6ae5c1b8e7ed10c3bf20534abdc987d7": {
+      "021e87b5da72d8d973372a023b6aa771": {
         "type": "object",
         "properties": {
           "data": {
@@ -3767,7 +3953,7 @@
           }
         }
       },
-      "7e295863e63329281fb66c48cc39d4ba": {
+      "99cb1e092128307b8facf5c6547edfd6": {
         "type": "object",
         "properties": {
           "data": {
@@ -3781,6 +3967,35 @@
               },
               "country": {
                 "type": "string"
+              },
+              "location": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "query": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "source": {
+                    "type": "string"
+                  },
+                  "latitude": {
+                    "type": "float"
+                  },
+                  "longitude": {
+                    "type": "float"
+                  },
+                  "timezone": {
+                    "type": "string"
+                  },
+                  "country_code": {
+                    "type": "string"
+                  }
+                }
               },
               "results_count": {
                 "type": "integer"
@@ -3821,7 +4036,7 @@
           }
         }
       },
-      "301b61c506d9e720bbf7e13c6900b988": {
+      "b31252f660ff8bca2e3419abc9492bad": {
         "type": "object",
         "properties": {
           "data": {
@@ -3899,7 +4114,7 @@
           }
         }
       },
-      "557ba9479e3b46f84d3de94101fdbac9": {
+      "b0fa8521c1e321226dfb35d181d8ee3a": {
         "type": "object",
         "properties": {
           "data": {
@@ -3920,7 +4135,7 @@
           }
         }
       },
-      "59738fabb3dde55ca973e63986a53fef": {
+      "e3b234b18c064b9f139e6c31c6bcb334": {
         "type": "object",
         "properties": {
           "data": {
@@ -3933,7 +4148,7 @@
           }
         }
       },
-      "1878d2ef42d59d234c05c2afacb36edd": {
+      "92eaf0c6d4c071cdd2bd0b85a68bacc5": {
         "type": "object",
         "properties": {
           "analysis": {
@@ -4226,7 +4441,7 @@
       }
     },
     "parameters": {
-      "7a4323da9edb17e37042780b0324dfa9": {
+      "ec5996e4a159a4901c7d8af4f1bc5497": {
         "name": "domain",
         "in": "query",
         "description": "The domain to search for backlinks",
@@ -4236,7 +4451,7 @@
         },
         "style": "form"
       },
-      "3c008e11dc109d8fa2f48877d536e2fe": {
+      "6652aaf745156ab2ef80dd9891a11ea2": {
         "name": "search_engine",
         "in": "query",
         "description": "The search engine to use. Supported values: google, bing, yahoo and duckduckgo. Default to google.",
@@ -4246,7 +4461,7 @@
         },
         "style": "form"
       },
-      "9c5679019fc63abf00a7a6b05e6ead59": {
+      "9ccc3be88a72c474df2eefc3b72e81d4": {
         "name": "country",
         "in": "query",
         "description": "The country to search from. Default to us.",
@@ -4256,7 +4471,7 @@
         },
         "style": "form"
       },
-      "7aeb7b3feab83b727bb804d8728e2217": {
+      "b9a775c79f43e94a2a59c47777115f3c": {
         "name": "pages_number",
         "in": "query",
         "description": "The number of pages to search (1-30). Default to 15.",
@@ -4266,7 +4481,7 @@
         },
         "style": "form"
       },
-      "9f70e9a4d60ce792a2624403d1400445": {
+      "9435f9d53010ac7d0c496383c9d4c7ea": {
         "name": "domain",
         "in": "query",
         "description": "The domain to search emails from",
@@ -4276,7 +4491,7 @@
         },
         "style": "form"
       },
-      "b4a68c9940a2817cf1cffbc9781a0681": {
+      "82684a02ea93b9c2e9c9bf4011448b55": {
         "name": "search_engine",
         "in": "query",
         "description": "The search engine to use. Supported values: google, bing, yahoo and duckduckgo. Default to duckduckgo.",
@@ -4286,7 +4501,7 @@
         },
         "style": "form"
       },
-      "f1227a93e97a5bbf4621ae84fbc94c6b": {
+      "412f4eaf7b6d0c834d0c456653165400": {
         "name": "pages_number",
         "in": "query",
         "description": "The number of pages to search (1-30). Default to 1.",
@@ -4296,7 +4511,7 @@
         },
         "style": "form"
       },
-      "635a108ff96f29e4edb71891d25bff13": {
+      "5d6895f444df094b4215eaec576f1908": {
         "name": "domain",
         "in": "query",
         "description": "The domain to check",
@@ -4306,7 +4521,7 @@
         },
         "style": "form"
       },
-      "6871e6b8638aa5ddfcf90684c6670dbf": {
+      "663bf76199d9d4915b6d86a84e0c1e30": {
         "name": "user_prompt",
         "in": "query",
         "description": "The user prompt",
@@ -4316,7 +4531,7 @@
         },
         "style": "form"
       },
-      "f82870b36f60d76e1dbc191e11bad568": {
+      "42ae358ffbeda61d84ecf8c933c49858": {
         "name": "system_prompt",
         "in": "query",
         "description": "The system prompt",
@@ -4326,7 +4541,7 @@
         },
         "style": "form"
       },
-      "175075e4bcf56ee7892a1e095c9f3e2e": {
+      "813ce0527dbccce3fec395d3380e26ae": {
         "name": "ai_model",
         "in": "query",
         "description": "The AI model (default: gpt-4.1-nano)",
@@ -4336,7 +4551,7 @@
         },
         "style": "form"
       },
-      "95bbb06261987031e9385be50cd89c19": {
+      "ddcd803a21dcfe451e8c81c84ff9cebf": {
         "name": "keywords",
         "in": "query",
         "description": "The keywords to search",
@@ -4349,7 +4564,7 @@
         },
         "style": "form"
       },
-      "9c1db8a07d573d7f932379961ba22187": {
+      "f57056bbe5058d852d674b807dba1aa0": {
         "name": "country",
         "in": "query",
         "description": "The country code to search for",
@@ -4359,7 +4574,7 @@
         },
         "style": "form"
       },
-      "960e7de68b14a7af64c4833e131683b6": {
+      "f3421a5aaa312c7e18a64c79f7265b04": {
         "name": "url",
         "in": "query",
         "description": "The url to search",
@@ -4369,7 +4584,7 @@
         },
         "style": "form"
       },
-      "be0c636bd304325c5634b9111fbbd679": {
+      "e33aca1bdf56d21449b3ec6c7cc7d7a0": {
         "name": "keywords",
         "in": "query",
         "description": "The keywords to search",
@@ -4382,7 +4597,37 @@
         },
         "style": "form"
       },
-      "e297de1426baed91f4383a1d1fdc4394": {
+      "cea98d6c557f1d3904ea55bad3c97f04": {
+        "name": "q",
+        "in": "query",
+        "description": "Start of a place name or postal code (at least 2 characters), e.g. \"brook\", \"austin\", \"112\".",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "style": "form"
+      },
+      "3fb5156be195abe9a78dcfa52d0e0415": {
+        "name": "country",
+        "in": "query",
+        "description": "Two-letter country code to rank that country's places first (e.g. us). Default to us.",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "style": "form"
+      },
+      "2fbb874677d66903862a7c7431b9927b": {
+        "name": "limit",
+        "in": "query",
+        "description": "Number of locations to return (1-50). Default to 10.",
+        "required": false,
+        "schema": {
+          "type": "integer"
+        },
+        "style": "form"
+      },
+      "6731939174d446f0c67ac559cf86a8aa": {
         "name": "keyword",
         "in": "query",
         "description": "The seed keyword to generate long-tail keywords from",
@@ -4392,7 +4637,7 @@
         },
         "style": "form"
       },
-      "87de6d8991abee8c0aff67fa3703ecd5": {
+      "5574c6708f5a5138ac7401c6fab3fd90": {
         "name": "search_intent",
         "in": "query",
         "description": "The search intent to generate long-tail keywords for. Supported values: informational, commercial, transactional, navigational. Default to informational.",
@@ -4402,7 +4647,7 @@
         },
         "style": "form"
       },
-      "283cf12c962ff38fe1ca4e769ae8243b": {
+      "29a0bf98ffefb7ee03a676efd22be36d": {
         "name": "count",
         "in": "query",
         "description": "The number of long-tail keywords to generate (1-500). Default to 10.",
@@ -4412,7 +4657,7 @@
         },
         "style": "form"
       },
-      "a9d1f44acd4dd0206173b940dbda39f7": {
+      "1566196118b05cf1c42990486c452624": {
         "name": "domain",
         "in": "query",
         "description": "The domain to analyze",
@@ -4422,7 +4667,7 @@
         },
         "style": "form"
       },
-      "1185eb8b80fa7bd3029df99a5e881eab": {
+      "05913b9c6ec31ec5d2bb993d37e24db0": {
         "name": "keyword",
         "in": "query",
         "description": "The keyword to check",
@@ -4432,7 +4677,7 @@
         },
         "style": "form"
       },
-      "1e016fc49b041a1fa71ffb0fb3a9063a": {
+      "9b889481cbeffc90f91a766b9c0eb0d7": {
         "name": "prompt",
         "in": "query",
         "description": "The prompt to use for remote control of the browser",
@@ -4442,7 +4687,7 @@
         },
         "style": "form"
       },
-      "ee44c750d282ae0fb2fde446b3954fff": {
+      "e6d945d28be14c38fab220258aa51faa": {
         "name": "keyword",
         "in": "query",
         "description": "The keyword to search",
@@ -4452,7 +4697,7 @@
         },
         "style": "form"
       },
-      "216ab90a4d75eb62387e07777b0f00b5": {
+      "b0640cd2712d065b3613a95e1df3e0f0": {
         "name": "domain",
         "in": "query",
         "description": "The domain to search",
@@ -4462,7 +4707,7 @@
         },
         "style": "form"
       },
-      "815410dc2a3aaf6849ff2b1723f93b7f": {
+      "4fab2bf6ae27aed8b36c520cccb7dcde": {
         "name": "pages_number",
         "in": "query",
         "description": "The number of pages to search (1-30). Default to 10.",
@@ -4472,7 +4717,7 @@
         },
         "style": "form"
       },
-      "d74022a6c0699f96ca8f5b71e4ae8af7": {
+      "10d5c888514595e56838d39024459dda": {
         "name": "device",
         "in": "query",
         "description": "Google only. desktop or mobile. Default to desktop.",
@@ -4482,27 +4727,27 @@
         },
         "style": "form"
       },
-      "fe638c9388f52f6dcb452cae9729026f": {
+      "0e8c2ecb667d12129f7c25c452e8bea8": {
         "name": "location",
         "in": "query",
-        "description": "Google only. \"lat,lng\" in decimal degrees (e.g. 40.6782,-73.9442). Default: the exit IP's location.",
+        "description": "Google only. Where the search is made from: \"lat,lng\" in decimal degrees (e.g. 40.6782,-73.9442), or a place name: city, neighborhood, county, state or postal code (e.g. \"Brooklyn, NY\", \"Austin TX\", \"11216\", \"SW1A 1AA, UK\"). Names are resolved to coordinates and a time zone; the resolved place is echoed in `location`. Look names up with /api/v1/locations. Default: the exit IP's location.",
         "required": false,
         "schema": {
           "type": "string"
         },
         "style": "form"
       },
-      "2b176fd75e41120077dedbe662f1d1ad": {
+      "2dad2f8d14e0dd4e46dd165be31b3140": {
         "name": "timezone",
         "in": "query",
-        "description": "Google only, with location. IANA time zone id.",
+        "description": "Google only, with location. IANA time zone id (e.g. America/New_York). Default: the named location's time zone.",
         "required": false,
         "schema": {
           "type": "string"
         },
         "style": "form"
       },
-      "c77e4a4e32ea1cf639df83c978e29182": {
+      "aa69b0b0f3fa1b0117a68717109f2fdc": {
         "name": "strict",
         "in": "query",
         "description": "Google only. Return 422 instead of results when the page looks poisoned. Default to false.",
@@ -4512,7 +4757,7 @@
         },
         "style": "form"
       },
-      "5ff84060c698299a0cf730c209ed9f2c": {
+      "1bf759ed266df8b144ab3ca015a24185": {
         "name": "max_resamples",
         "in": "query",
         "description": "Google only. Extra captures (0-3) when page 1 looks poisoned. Default to 1.",
@@ -4522,7 +4767,7 @@
         },
         "style": "form"
       },
-      "bd66bf6c59f2f48d143fad774489d32e": {
+      "46c874eb54b68c49f5c9a4e23bb09e95": {
         "name": "url",
         "in": "query",
         "description": "The url to scrap",
@@ -4532,7 +4777,7 @@
         },
         "style": "form"
       },
-      "e0845f7721d45dbb1d7b79821f1ebda8": {
+      "95595214234b59fdddf4a8943fdc44a8": {
         "name": "domain",
         "in": "query",
         "description": "The domain to scrape",
@@ -4542,7 +4787,7 @@
         },
         "style": "form"
       },
-      "d6f7b773b3e38053c2cef92453535b34": {
+      "98aa6932d831a09579fe47f1f77e3b8c": {
         "name": "max_pages",
         "in": "query",
         "description": "The maximum number of pages to scrape (up to 200). Default to 10.",
@@ -4552,7 +4797,7 @@
         },
         "style": "form"
       },
-      "b6918c860b4721b55ce38c237c9fa7e1": {
+      "f73988b7ab265026188735be680e07c6": {
         "name": "js_script",
         "in": "query",
         "description": "The javascript code to execute on the page",
@@ -4562,7 +4807,7 @@
         },
         "style": "form"
       },
-      "3d2464dd753a190140e7dfe7c4d637fa": {
+      "8acdd7dcf41ffa7c199095ec513408de": {
         "name": "country",
         "in": "query",
         "description": "The country to use for the proxy",
@@ -4572,7 +4817,7 @@
         },
         "style": "form"
       },
-      "b29728c77c0b2bdb1a85de9da3046d10": {
+      "32aa60a30e3320137f3d09f779431245": {
         "name": "query",
         "in": "query",
         "description": "The query to search",
@@ -4582,7 +4827,7 @@
         },
         "style": "form"
       },
-      "315a89e771a6ebd4259efcff8ad180ba": {
+      "ef6629bad38f714f28afe8416fb598fb": {
         "name": "resolve_urls",
         "in": "query",
         "description": "Google only. Resolve Google redirect links (google.com/goto) to their destination URLs. Default to true. When false, `url` is null for redirect links and `domain`/`display_url` are still returned.",
@@ -4592,27 +4837,7 @@
         },
         "style": "form"
       },
-      "bea29f47d66087c795ffab4c118be2d2": {
-        "name": "location",
-        "in": "query",
-        "description": "Google only. \"lat,lng\" in decimal degrees (e.g. 40.6782,-73.9442). Places the browser session there so local results and the SERP footer reflect that location. Default: the exit IP's location.",
-        "required": false,
-        "schema": {
-          "type": "string"
-        },
-        "style": "form"
-      },
-      "bd4787586e4ef57dd38f02b5774f1871": {
-        "name": "timezone",
-        "in": "query",
-        "description": "Google only, with location. IANA time zone id (e.g. America/New_York).",
-        "required": false,
-        "schema": {
-          "type": "string"
-        },
-        "style": "form"
-      },
-      "e23f08efeac3151af7f4144b60eba899": {
+      "c1b0de989cc2b81b6bb8382f1e4efff1": {
         "name": "strict",
         "in": "query",
         "description": "Google only. Return 422 instead of results when the page looks poisoned (see `quality`). Default to false.",
@@ -4622,7 +4847,7 @@
         },
         "style": "form"
       },
-      "161c7375875895e0a4f59a2447c64cd1": {
+      "0f9b986b2f997008265ac9453aee456a": {
         "name": "samples",
         "in": "query",
         "description": "Google only. Take 1-5 independent captures of page 1 and return a per-domain retrieval distribution. Implies pages_number=1. Default to 1.",
@@ -4632,7 +4857,7 @@
         },
         "style": "form"
       },
-      "4e63aeb62001dcd4013106ceaa0daf19": {
+      "8c51804fc85bb39529fd2b3d26f49c5a": {
         "name": "max_resamples",
         "in": "query",
         "description": "Google only. Extra captures (0-3) to take when page 1 looks poisoned; the best is returned. Each one is a fresh browser identity (often a captcha solve, tens of seconds). Default to 1.",
@@ -4642,7 +4867,7 @@
         },
         "style": "form"
       },
-      "8e25b3c523b4c42d30dae1e6c378db7e": {
+      "25bb15bcf19400f2643acd2f92ddd80b": {
         "name": "uuid",
         "in": "path",
         "description": "The uuid returned by the SERP JS endpoint",
@@ -4652,7 +4877,7 @@
         },
         "style": "simple"
       },
-      "e10c3fdd4f57fa97d9ef353a5c5f43fb": {
+      "db85e305cb3bdcce5bf5ac95af5fb5fe": {
         "name": "resolve_urls",
         "in": "query",
         "description": "Google only. Resolve Google redirect links to destination URLs. Default to true. Unresolved results are skipped by this endpoint.",
@@ -4662,7 +4887,7 @@
         },
         "style": "form"
       },
-      "bb40bd367b30b348c8c438e5a886c227": {
+      "92451534c4076d0f962635927f65243a": {
         "name": "pages_number",
         "in": "query",
         "description": "The number of pages to search (1-10). Default to 1.",
@@ -4672,7 +4897,7 @@
         },
         "style": "form"
       },
-      "f8f09a57d731547e6d17e18e88c911fe": {
+      "e37f03b868a98e8db61771029e8fe368": {
         "name": "url",
         "in": "query",
         "description": "The url to analyze",
@@ -4682,7 +4907,7 @@
         },
         "style": "form"
       },
-      "51ef2b8886208a3bbf6df0e30e1ae059": {
+      "3f0a87b577e6f932c1489080692d7ca7": {
         "name": "prompt",
         "in": "query",
         "description": "The prompt to use for the analysis",
