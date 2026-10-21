@@ -31,6 +31,19 @@ Google results on `/api/v1/serp`, `/api/v1/serp_html`, `/api/v1/serp_text` and `
 
 Every Google page is scored for poisoning and the score comes back in `quality` (`score`, `flags`, `suspected_poisoned`). When a later page of a multi-page request fails, the pages that did load are returned with a `warnings` array instead of an error; only a request with no results at all fails. The full parameter and response schemas are on each endpoint's page.
 
+## AI answers
+
+`POST /api/v1/ai_answer` asks a prompt the way a logged-out user would and returns each engine's answer: `google_aio`, `google_ai_mode`, `chatgpt`, `gemini` and `copilot_search` (Bing's Copilot Search). Each sample carries the answer text and markdown, `citations` (resolved URLs, domains, where each appeared, the sentence it backs), `fan_out_queries` where the engine shows them, named `entities` and products (ChatGPT), and `engine_version`:
+
+| Field | What it is |
+| --- | --- |
+| `model_id` | The model identifier the engine's own stream reports, when it reports one. |
+| `model_label` | The model or mode the page shows (`3.5 Flash-Lite` on Gemini, `auto` on ChatGPT). |
+| `client_build` | The web app's build or release id; it changes when the product ships, even when the model name does not. |
+| `version_source` | `stream`, `ui`, `build_only` or `undisclosed` (Google's AI features and Bing name no model). |
+
+Requests run asynchronously: poll the returned `url`, pass `wait=true` (up to 120 s), or set `webhook_url`. `samples` (1-10) takes independent captures and adds a `distribution` with mention and citation rates and 95% intervals for `track_brands` and `track_domains`. `POST /api/v1/ai_answer/batch` takes up to 1000 prompt x engine tasks with an `idempotency_key`. Each sample costs credits (see `GET /api/v1/ai_engines`, free, which also lists the versions observed in the last 24 hours); samples that fail after retries are refunded. Perplexity, Grok, Claude, the Copilot app and Meta AI need signed-in accounts and are not available yet.
+
 ## Rate Limits
 
 We allow up to **600 requests per minute** per account (aggregated across all endpoints). When the limit is exceeded the API responds with **429 Too Many Requests** plus a `Retry-After` header indicating how many seconds to wait before retrying.

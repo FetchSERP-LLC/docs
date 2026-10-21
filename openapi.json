@@ -23,6 +23,207 @@
     }
   ],
   "paths": {
+    "/api/v1/ai_answer": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "AI answer capture",
+        "description": "Captures what a logged-out user sees when they ask each engine the prompt: answer text and markdown, citations (resolved URLs, domains, placement, the sentence they back), fan-out queries where the engine shows them, named entities and products (ChatGPT), and `engine_version` (model id or label, web build, version_source). Runs asynchronously: poll `url`, pass wait=true, or set webhook_url. Samples that fail after retries are refunded.",
+        "operationId": "create_api_v1_ai_answer",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/cb64ccc2dbbfdbe0f43b1db31f5c240c"
+          },
+          {
+            "$ref": "#/components/parameters/d5b698683200e71471fbfa1420905ff5"
+          },
+          {
+            "$ref": "#/components/parameters/0b8219acb80c638a4f139f388c36729c"
+          },
+          {
+            "$ref": "#/components/parameters/01744852f75466c254a711bb7dc826ea"
+          },
+          {
+            "$ref": "#/components/parameters/da0345ae7008d412af9ee2c3d647c21f"
+          },
+          {
+            "$ref": "#/components/parameters/3d4a11ea442682271229c4fdfdd0f435"
+          },
+          {
+            "$ref": "#/components/parameters/b7d9338a7fcad4f209f6f2ba4b9e81ec"
+          },
+          {
+            "$ref": "#/components/parameters/6790fb343b627cd4831de938bf628de9"
+          },
+          {
+            "$ref": "#/components/parameters/f7db4920b7aa7ea945d4112aa5bc0b70"
+          },
+          {
+            "$ref": "#/components/parameters/832353e18dc5525ad638508a8dd0454d"
+          },
+          {
+            "$ref": "#/components/parameters/936b828a3e28d2f940115dbefcf74236"
+          },
+          {
+            "$ref": "#/components/parameters/aabcc6d3ac3ecd32d7ff68f78bc7904f"
+          },
+          {
+            "$ref": "#/components/parameters/a0679b63f7a8d007e1e792142560e901"
+          }
+        ],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/c783c527179842d0a3b0e98e7d845c2c"
+        },
+        "responses": {
+          "401": {
+            "$ref": "#/components/responses/7cd3fa68e01051bf93aec0390b939eb0"
+          },
+          "402": {
+            "$ref": "#/components/responses/fc4e14917d6056e1151e4685d46feb3d"
+          },
+          "422": {
+            "$ref": "#/components/responses/5b660a7508aad955c0e8b4b71313d8e8"
+          },
+          "200": {
+            "$ref": "#/components/responses/ee14200090a5ac0628e0e6a89431220e"
+          },
+          "403": {
+            "$ref": "#/components/responses/db8ff4d7a267ed2b9f60e8ec33660513"
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/ai_answer/batch": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "AI answer batch",
+        "description": "The same capture as /ai_answer for many prompts at once. Shared options (country, location, device, track_brands, track_domains, include, webhook_url) apply to every task. Results arrive at `url` or by webhook.",
+        "operationId": "batch_api_v1_ai_answer_batch",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/1a5bd9f832bc6a3df9ca1d907a60b2f4"
+          },
+          {
+            "$ref": "#/components/parameters/04a05bb4d94f688c8d7d1ad6981b8653"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/a5039390f153e3051f1c68302b3bc66f"
+          },
+          "401": {
+            "$ref": "#/components/responses/ed16f07f2c3c92114bfe8d04dee9e46e"
+          },
+          "403": {
+            "$ref": "#/components/responses/86179ab4877cec4400a519348ad360bf"
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/ai_answer/captures/{id}/raw": {
+      "get": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "AI answer raw capture",
+        "description": "The stored stream bodies, answer DOM and page HTML for a capture made with include=raw_stream or html, for 7 days.",
+        "operationId": "raw_api_v1_ai_answer_captures_id_raw",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/0a592095dbe0b94b78a8b31ff2d4e4dd"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/fa97b4b38265f226e802a9b93df23c36"
+          },
+          "401": {
+            "$ref": "#/components/responses/2fc029568a7964c4d82fd20e724e1714"
+          },
+          "403": {
+            "$ref": "#/components/responses/39747843ae4d85bcc62a3eb519b4fb75"
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/ai_answer/{uuid}": {
+      "get": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "AI answer results",
+        "description": "",
+        "operationId": "show_api_v1_ai_answer_uuid",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/6581caad72c682e505a884795a80eb27"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/79384c6259c0121999bbb672e9c70f7a"
+          },
+          "404": {
+            "$ref": "#/components/responses/2bbc2dc17d49ba1669fdcf5067b395d6"
+          },
+          "401": {
+            "$ref": "#/components/responses/565d7d0abf7d2a6c3f1a9f3e431b80a6"
+          },
+          "403": {
+            "$ref": "#/components/responses/2207ae62b9e73d643c9cef5409af0864"
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/ai_engines": {
+      "get": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "AI engines",
+        "description": "The engines /ai_answer captures, their price per sample, the latest hourly health check, and the model and web-build versions FetchSERP observed in the last 24 hours. Free.",
+        "operationId": "index_api_v1_ai_engines",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/1e56f5053d8f2d298b2c766326658030"
+          },
+          "401": {
+            "$ref": "#/components/responses/0c14b92e920a835e869abf212ab1a4e6"
+          },
+          "403": {
+            "$ref": "#/components/responses/845e637401e2b928147d1c8a07f770d8"
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
     "/api/v1/backlinks": {
       "get": {
         "tags": [
@@ -47,19 +248,19 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/a93bd9bcae77a5f7559a5bb6a941468e"
+            "$ref": "#/components/responses/21fe7cbbb38ba3bb991592ea3c27cb23"
           },
           "422": {
-            "$ref": "#/components/responses/b2b709d0cdf0c8955fbcfc89469e1698"
+            "$ref": "#/components/responses/ab931729e0c7bfb7ae4dff9ab55e4c2b"
           },
           "500": {
-            "$ref": "#/components/responses/f277ef6c75cce90c6bd32d9ceb58dcec"
+            "$ref": "#/components/responses/1921c6e8ff96ab9af6cc87660c368187"
           },
           "200": {
-            "$ref": "#/components/responses/d1fe516663db5363be38cf0ddabda548"
+            "$ref": "#/components/responses/fb45bda9114ce5f304834a76f2bebdb8"
           },
           "403": {
-            "$ref": "#/components/responses/5c7775c1669a18c0106d3f8621fc53c9"
+            "$ref": "#/components/responses/84f749b10222d59b3cddb04b7a54057f"
           }
         },
         "security": [
@@ -93,19 +294,19 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/edb64fd04c0bbc7c4b215f1663c9c7f9"
+            "$ref": "#/components/responses/aaf51aa2c8cc11aec4c6f9577ccf323e"
           },
           "422": {
-            "$ref": "#/components/responses/a851b1a892e048689fd77528cd30bb2d"
+            "$ref": "#/components/responses/7e150ae6af7edef07f40f8c41cb3feee"
           },
           "500": {
-            "$ref": "#/components/responses/95e0ea4a1222ad94ca6def972fadd378"
+            "$ref": "#/components/responses/4d7ca0fb68b74423eac505c70ee6c245"
           },
           "200": {
-            "$ref": "#/components/responses/efd306c6f6c894c8e8b53447cc72a66f"
+            "$ref": "#/components/responses/b78fb1066ad8fde3d69744f530971e16"
           },
           "403": {
-            "$ref": "#/components/responses/ebfa25e007419df500a367344181918a"
+            "$ref": "#/components/responses/d2d536e7d46a7cbc8dec11a2c1426f6d"
           }
         },
         "security": [
@@ -130,19 +331,19 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/abce9eb2ad79ef94dcfce145643c847d"
+            "$ref": "#/components/responses/0b91fb0dca7363752dd01b7220572aae"
           },
           "422": {
-            "$ref": "#/components/responses/b8f1580714e31df136a5137695f73046"
+            "$ref": "#/components/responses/6116abc0af550b0caf47b7ff39da5a1f"
           },
           "500": {
-            "$ref": "#/components/responses/6c4fbbc6b231f159a9ad3eb48ee466ca"
+            "$ref": "#/components/responses/48c8579aae7c8c42c13f98166197e6cf"
           },
           "200": {
-            "$ref": "#/components/responses/2c06124bb57e0e500b9ad60b5ffcb7fb"
+            "$ref": "#/components/responses/cd4896985a0e782860cd8b0c020caa61"
           },
           "403": {
-            "$ref": "#/components/responses/6e1ea9b2b056a7031c122409232f5ce4"
+            "$ref": "#/components/responses/50841c3f786718a957fe669e3bcb7722"
           }
         },
         "security": [
@@ -173,13 +374,13 @@
         ],
         "responses": {
           "200": {
-            "$ref": "#/components/responses/e5c1d5d9bbbb8cded80f0ca71b53ceb8"
+            "$ref": "#/components/responses/534dc5d891f75916dd31b14eb0eb4f51"
           },
           "401": {
-            "$ref": "#/components/responses/cef01ae2b5a12635b4ad6a185783e1f6"
+            "$ref": "#/components/responses/566b329670ad207cc5b7c5fd2f2cafcf"
           },
           "403": {
-            "$ref": "#/components/responses/1297c7df63291f085133dc9ffde51ffb"
+            "$ref": "#/components/responses/53eb8c86b3342b38e067d096957b5abc"
           }
         },
         "security": [
@@ -210,13 +411,13 @@
         ],
         "responses": {
           "200": {
-            "$ref": "#/components/responses/2b7c700a11e2813a900ea330a7d5f236"
+            "$ref": "#/components/responses/0fe240d9aa8f9d31bc26e1eaca109403"
           },
           "401": {
-            "$ref": "#/components/responses/e2c091d07320d71b8c9f7d85e16f6c71"
+            "$ref": "#/components/responses/499101b96c8774f78cdd7ecf44ed4971"
           },
           "403": {
-            "$ref": "#/components/responses/5fd4c96781f70995cca6db55ed5f3db0"
+            "$ref": "#/components/responses/013c82e5ec8cd81bc39953ed794a9665"
           }
         },
         "security": [
@@ -244,19 +445,19 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/601b134b5b051845782bbb4f20bdc827"
+            "$ref": "#/components/responses/4d2a945a49d41e2aa1e2f9f0c971f140"
           },
           "422": {
-            "$ref": "#/components/responses/1b5a10a7fc85e914d3e43922bf30417d"
+            "$ref": "#/components/responses/4831f32e497dbd0d1086e0250535f18d"
           },
           "500": {
-            "$ref": "#/components/responses/c9024952169602557d888cab880f6393"
+            "$ref": "#/components/responses/c486f3303c9e4e8a8ead180c286295da"
           },
           "200": {
-            "$ref": "#/components/responses/70287a1f30bedb630f347d6eb2d23705"
+            "$ref": "#/components/responses/03439cf549198b54310e886692760828"
           },
           "403": {
-            "$ref": "#/components/responses/81fcba23419fcdb4eaf12ad44ad41854"
+            "$ref": "#/components/responses/8107f052a810be44ce1811e3509f7888"
           }
         },
         "security": [
@@ -287,19 +488,19 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/f636af961bd02f2dc3ff2abda8bb0611"
+            "$ref": "#/components/responses/fb0a06aca623fc120c8dc59823d815ad"
           },
           "422": {
-            "$ref": "#/components/responses/346f869572ef51d5b9eab3d6a3f46d41"
+            "$ref": "#/components/responses/104a55c6626eb6f26ff3261c31b4c956"
           },
           "500": {
-            "$ref": "#/components/responses/1a8ec6f283e8c19dea1243acb50883ec"
+            "$ref": "#/components/responses/73a03ef4a3cae1a4cf085e8287415dce"
           },
           "200": {
-            "$ref": "#/components/responses/1ff47801ad9b38e458d52522647cb8bb"
+            "$ref": "#/components/responses/30c9adb7089f7e0303df51b883b84a30"
           },
           "403": {
-            "$ref": "#/components/responses/182637d6c52b7a7604429e1eea2b2a5f"
+            "$ref": "#/components/responses/1c782450c62dcb7ba7c8d5b04ffeebe6"
           }
         },
         "security": [
@@ -330,16 +531,16 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/8914c98e3ba37dc36b16e721f86fe52c"
+            "$ref": "#/components/responses/ca657ec3aeab52a1091b79d4f3861836"
           },
           "422": {
-            "$ref": "#/components/responses/ebfdcc92cdd9f33caf4161182a99ba88"
+            "$ref": "#/components/responses/5a510a61b07d2872d60538e875f7b5e8"
           },
           "200": {
-            "$ref": "#/components/responses/a90422450e9104cc43fa412db111509f"
+            "$ref": "#/components/responses/ec3318d55df217b833779f6fd489b30d"
           },
           "403": {
-            "$ref": "#/components/responses/db6c00b0fc58e54768d48e8b79e7a564"
+            "$ref": "#/components/responses/2684a97a1a85cd4c06d064c09fd51d3e"
           }
         },
         "security": [
@@ -370,19 +571,19 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/10954527fd00d535ee51b044b1628226"
+            "$ref": "#/components/responses/a99ea9405fa4695b95830bcb142f574e"
           },
           "422": {
-            "$ref": "#/components/responses/4e720a783dd548a5476dae6d1b5a23c0"
+            "$ref": "#/components/responses/3cc5e10e820522451110a2da7c1dbc52"
           },
           "500": {
-            "$ref": "#/components/responses/bfd0467171c7297342c04525fd343fcb"
+            "$ref": "#/components/responses/282bb10afde5078068c02a71a409eac8"
           },
           "200": {
-            "$ref": "#/components/responses/1dc114ef7bd795b1d27e6f3ff8550ba2"
+            "$ref": "#/components/responses/c36f08e1f2c8bf1dc42a4b34c48adb9c"
           },
           "403": {
-            "$ref": "#/components/responses/2de60c38c0f7bb15e8731eb565905a4f"
+            "$ref": "#/components/responses/b845bed7db01eadaf56c117c186fe3fc"
           }
         },
         "security": [
@@ -407,19 +608,19 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/80a31a5a3e34962463246cc512e9d39d"
+            "$ref": "#/components/responses/8dadbaef6640a08bb06a1af466009cc8"
           },
           "422": {
-            "$ref": "#/components/responses/1d83ec9b88868e76a60347c991ec676c"
+            "$ref": "#/components/responses/e8f194278b7a1c0360201136c8088ecc"
           },
           "500": {
-            "$ref": "#/components/responses/71a0353bb216e1277e21a91e9c0ccb84"
+            "$ref": "#/components/responses/01a4e7e67dbeee4b6d9d0013074e6b79"
           },
           "200": {
-            "$ref": "#/components/responses/76dc73c48c2cb3fbffe803b0038a1669"
+            "$ref": "#/components/responses/22f33f4db8f5c7d1ace62d01d552d744"
           },
           "403": {
-            "$ref": "#/components/responses/17ec37cd0cc746907a9b78429d0b906d"
+            "$ref": "#/components/responses/b1f922057db12d5c893cccb09facf958"
           }
         },
         "security": [
@@ -447,19 +648,19 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/27536bb3d6b0b8c87b58453f01b388f5"
+            "$ref": "#/components/responses/d7da1e684319692ff7a9689119f0c84f"
           },
           "422": {
-            "$ref": "#/components/responses/a897657704b40912a117c26f28ea7ec4"
+            "$ref": "#/components/responses/ac4352a99b50818c02411624f03ec59a"
           },
           "500": {
-            "$ref": "#/components/responses/dcc761eb969c543eaa38d88687c5ee44"
+            "$ref": "#/components/responses/95b536272529b516c23ada76e7f5ac27"
           },
           "200": {
-            "$ref": "#/components/responses/d448101ad4bfddf262149c08dbae2f92"
+            "$ref": "#/components/responses/ba343081f28fa872ef8431a84828cb38"
           },
           "403": {
-            "$ref": "#/components/responses/cf9bb8faa708469732aed995ad48dc36"
+            "$ref": "#/components/responses/9aebe4b3216bb1e4f8f0b8e22f37dfef"
           }
         },
         "security": [
@@ -484,19 +685,19 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/a15653ba9595b7d6f07fc10346f68d13"
+            "$ref": "#/components/responses/c549158334beede2166f22bb3b043ac2"
           },
           "422": {
-            "$ref": "#/components/responses/77a349bdb09a071f00dd90cdab8677d1"
+            "$ref": "#/components/responses/039e217effe19f1caf64eedef9eb7827"
           },
           "500": {
-            "$ref": "#/components/responses/3e36bc45a8d4307237f3e3b89d2b78e3"
+            "$ref": "#/components/responses/b1c673856552ca5ee16cd88b6df374bd"
           },
           "200": {
-            "$ref": "#/components/responses/f6d75ca89e68c715c78d3a999a5495e2"
+            "$ref": "#/components/responses/58177e87f0dd914c8fabfa6de2dbca59"
           },
           "403": {
-            "$ref": "#/components/responses/b50eed768b217c6b44a47363c7e64a98"
+            "$ref": "#/components/responses/0ba85018ea875d154e05b73747dc0efb"
           }
         },
         "security": [
@@ -548,19 +749,19 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/340322023d81356e3c7545b87176f461"
+            "$ref": "#/components/responses/d95c80af902c2c020a009860138673d3"
           },
           "422": {
-            "$ref": "#/components/responses/8ef6eff228d7d7134f7805bd169425ce"
+            "$ref": "#/components/responses/94634a792e314adf31356e5affe61d0d"
           },
           "500": {
-            "$ref": "#/components/responses/86b612f55c9b1aa6568977905b28dfa6"
+            "$ref": "#/components/responses/355618f0e6532f8b19836f9bbb54ad7e"
           },
           "200": {
-            "$ref": "#/components/responses/1cb4ee678fb295a69d1b8b838d9083e8"
+            "$ref": "#/components/responses/69e8a27fd499a9c983aaf069462d134b"
           },
           "403": {
-            "$ref": "#/components/responses/4b196be8ee9c95dd2ae7ec36d683ff51"
+            "$ref": "#/components/responses/9370e62e67cc85c0e24bae2176513496"
           }
         },
         "security": [
@@ -585,19 +786,19 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/c3521cb53ce53e23cc221f5a9cbb3e23"
+            "$ref": "#/components/responses/628b860c1a773435f9183d2d0d6f6944"
           },
           "422": {
-            "$ref": "#/components/responses/cd7c702f7fc6d1f783085f6884a8db76"
+            "$ref": "#/components/responses/08857840e71409bd2d38bbdb6beda8a4"
           },
           "500": {
-            "$ref": "#/components/responses/38b29d3c5ad25ee68c3e24f7f005b9d1"
+            "$ref": "#/components/responses/d08e1ff7811d817e45b43451200a310a"
           },
           "200": {
-            "$ref": "#/components/responses/5f3cfa6a41aafc1c902350360e7bafdf"
+            "$ref": "#/components/responses/002e7dac61ba571754e446673dbddbdc"
           },
           "403": {
-            "$ref": "#/components/responses/ca5f44bab43cecb2153f26ece15ea854"
+            "$ref": "#/components/responses/65b9d5cd2eb8fe757d933d05f99b014c"
           }
         },
         "security": [
@@ -625,19 +826,19 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/81b2d2c9ecae25e660d4f7040606b79b"
+            "$ref": "#/components/responses/ce31b2b6178620006fc337aa5f22581f"
           },
           "422": {
-            "$ref": "#/components/responses/07889aa273dd222ebd34f5bf8927f5ac"
+            "$ref": "#/components/responses/544c2f095ab903367951b17ee1e0fcf3"
           },
           "500": {
-            "$ref": "#/components/responses/b921bf4c2a156f4527ffc66918c11511"
+            "$ref": "#/components/responses/44acb18eebeda7a64b753e41ac86993d"
           },
           "200": {
-            "$ref": "#/components/responses/ccf8543162752a2dc7461de21dff022d"
+            "$ref": "#/components/responses/6cd8332cfe35b7b47071e43e9339ffd2"
           },
           "403": {
-            "$ref": "#/components/responses/531cf9dccfdf6f87c964716d1f39e502"
+            "$ref": "#/components/responses/07f60b6446f961f65b879f0a2b15d69e"
           }
         },
         "security": [
@@ -664,23 +865,23 @@
           }
         ],
         "requestBody": {
-          "$ref": "#/components/requestBodies/2a9cee832449ef70c5fb86bbcd82a167"
+          "$ref": "#/components/requestBodies/b8c0102570d7953dc8a3fd52a6f8d99c"
         },
         "responses": {
           "401": {
-            "$ref": "#/components/responses/12f453dc0aa2ed1e644d4a9f1082d16f"
+            "$ref": "#/components/responses/054f9b788161fe1c490e1f13ac3f4c13"
           },
           "422": {
-            "$ref": "#/components/responses/995d645c53d7fa9fc406248fdcad636d"
+            "$ref": "#/components/responses/b33e63a5257ac891c3d03c42632e4494"
           },
           "500": {
-            "$ref": "#/components/responses/30220f5bd1dcee0fc1dd192ca4e13728"
+            "$ref": "#/components/responses/a5f653be7294772d2d1f2c6797ed73bf"
           },
           "200": {
-            "$ref": "#/components/responses/0fc18e983c9caf64d19ed8fe0f1243d2"
+            "$ref": "#/components/responses/1db17fa25fefe2240a6cc242551c5e56"
           },
           "403": {
-            "$ref": "#/components/responses/3784359ac24ddd6b252b2dd93beea043"
+            "$ref": "#/components/responses/3fcc65170943ee9d9de072fa377a3d90"
           }
         },
         "security": [
@@ -710,23 +911,23 @@
           }
         ],
         "requestBody": {
-          "$ref": "#/components/requestBodies/25b502e07f68baa4cdccd93e13dbfed1"
+          "$ref": "#/components/requestBodies/d202d1dafa61503f333ac55f6c506d60"
         },
         "responses": {
           "401": {
-            "$ref": "#/components/responses/5d979bd0c053048205bc4ba3e329617a"
+            "$ref": "#/components/responses/d33e363d221c31d14862b458242ede8b"
           },
           "422": {
-            "$ref": "#/components/responses/f97943f518b86600ce2e090e6b1dba49"
+            "$ref": "#/components/responses/e495e5af4485416b74a12146176d033a"
           },
           "500": {
-            "$ref": "#/components/responses/44429666078d81208c5448e3aebaab18"
+            "$ref": "#/components/responses/d78bb064259936b9b42f793a601b093a"
           },
           "200": {
-            "$ref": "#/components/responses/b3119ac2bb1e1fed563d3f23c7143efd"
+            "$ref": "#/components/responses/3983490cd06c547ff4d87a2fceab229a"
           },
           "403": {
-            "$ref": "#/components/responses/f21c5e28ca2e73e87a6ed9c07bd45c8f"
+            "$ref": "#/components/responses/1154805457a2d4bbb419464b776948dd"
           }
         },
         "security": [
@@ -781,19 +982,19 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/b4d1fb108bbe86ad024967a4286ed69a"
+            "$ref": "#/components/responses/62382c9ac582f6f26eea6bb5c606d33e"
           },
           "422": {
-            "$ref": "#/components/responses/5c152b1740f5af7e9e4ff29155c98455"
+            "$ref": "#/components/responses/44896dd8aa16259c1e2302ae98a33a86"
           },
           "500": {
-            "$ref": "#/components/responses/0466dcc24aed86fecaf900ad7818cb21"
+            "$ref": "#/components/responses/398d3241ee88b925ebd53564d342bdf2"
           },
           "200": {
-            "$ref": "#/components/responses/6d5dcf2d0102b3a70556ed2992fc3009"
+            "$ref": "#/components/responses/92a76983c613671badc2481d4180fe32"
           },
           "403": {
-            "$ref": "#/components/responses/7ff117d41b48f41d426e2b918a0bc095"
+            "$ref": "#/components/responses/2385917ac346989d1b1a09496823e03e"
           }
         },
         "security": [
@@ -821,19 +1022,19 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/469b4283d622ca28342f134d9e30ce16"
+            "$ref": "#/components/responses/726c99b03bc80215051885212ddf2338"
           },
           "422": {
-            "$ref": "#/components/responses/d5f07c2c218705d45990f69b7f652575"
+            "$ref": "#/components/responses/750749ffa2b68ba0179662515b47c539"
           },
           "500": {
-            "$ref": "#/components/responses/fb69dd99dcbbfd363b4942d515fc02cd"
+            "$ref": "#/components/responses/5d12b2eb55a4a795ddbbf18a9a441cf9"
           },
           "200": {
-            "$ref": "#/components/responses/386b114e50575f6a89cedd906eca77c7"
+            "$ref": "#/components/responses/cb60833a1f277c2b57343dd2072fd0f5"
           },
           "403": {
-            "$ref": "#/components/responses/9117c7513ebb1d691ab98dee833314c3"
+            "$ref": "#/components/responses/2ae18dc27daefe4c3072e8d7a947126f"
           }
         },
         "security": [
@@ -858,22 +1059,22 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/858d93ea102dd94f06fd66dccf068435"
+            "$ref": "#/components/responses/71fcfd4352811c65b4427e7396042d3f"
           },
           "422": {
-            "$ref": "#/components/responses/7ca6cb1bbcde3902cbd8dffc8b9f7603"
+            "$ref": "#/components/responses/684faffd00203dde050485fad3cc766b"
           },
           "500": {
-            "$ref": "#/components/responses/313c4a75961402925c6c846951f27455"
+            "$ref": "#/components/responses/879d5f365bca1d32d8a290420cf31933"
           },
           "200": {
-            "$ref": "#/components/responses/e78c689a29d7b4d2125c6f0f7c48b496"
+            "$ref": "#/components/responses/0122b4354831ff839d35220e9767a548"
           },
           "404": {
-            "$ref": "#/components/responses/1f6e85226f00744d0169a211bf2426da"
+            "$ref": "#/components/responses/c0a97496944403736866d141c9014ba8"
           },
           "403": {
-            "$ref": "#/components/responses/a4984a9c7fe1ddad89c17711ae4139c6"
+            "$ref": "#/components/responses/f63de5ded741f14c5a7ff2b22f6656f1"
           }
         },
         "security": [
@@ -901,19 +1102,19 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/63d2f91e81d4fd813ddbd268998b3d9d"
+            "$ref": "#/components/responses/8fbddbb63785596a7949ca673f60d138"
           },
           "422": {
-            "$ref": "#/components/responses/4b9758a1b172ab982f7255c601b92987"
+            "$ref": "#/components/responses/2ef61ed1029580dd7948d5bbf91f8e1f"
           },
           "500": {
-            "$ref": "#/components/responses/98d9722b482fe1008bcba4f3c84c7d92"
+            "$ref": "#/components/responses/2872ad8ddb7120d9a4a91de2e6c8ec02"
           },
           "200": {
-            "$ref": "#/components/responses/da5e4dca381dd908bf5d3eb45bba2371"
+            "$ref": "#/components/responses/c6ede7d65a71363e81d05950483910f7"
           },
           "403": {
-            "$ref": "#/components/responses/4b9c9e85e6d1166513eb18da91c18f2a"
+            "$ref": "#/components/responses/ae12f7e2ae3dd8a141f480a6a17500b2"
           }
         },
         "security": [
@@ -959,19 +1160,19 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/949fb8c908b31461a531eed582628f5d"
+            "$ref": "#/components/responses/3e982a295ee68cd964a4ae803349c94f"
           },
           "422": {
-            "$ref": "#/components/responses/e8f9c55a5c8728af9020fba40b5e1b0c"
+            "$ref": "#/components/responses/99e8bd66bde913900b5e2a305f1baa8a"
           },
           "500": {
-            "$ref": "#/components/responses/070fc587e914577ffbcde70794adaca3"
+            "$ref": "#/components/responses/3411f9b4b0efbec6079e439f6d78107d"
           },
           "200": {
-            "$ref": "#/components/responses/a54b5cf7dd56831c13dfb9f0da216736"
+            "$ref": "#/components/responses/b144e36789da3b1ca62844bbdb59350b"
           },
           "403": {
-            "$ref": "#/components/responses/b2d16397c42fa68b3c438d43a9b53fda"
+            "$ref": "#/components/responses/cf27fc786ad20675c59bfd4cbb7fc222"
           }
         },
         "security": [
@@ -1002,19 +1203,19 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/6f16d3ca17889025eb7f47ec160eda62"
+            "$ref": "#/components/responses/f603c459d3d2296a356ec64161bacf65"
           },
           "422": {
-            "$ref": "#/components/responses/47fa0ae67e2cffe43786911fdc18e3ff"
+            "$ref": "#/components/responses/846155e38b0cd728c76c9007c01f2e9c"
           },
           "500": {
-            "$ref": "#/components/responses/570222dc37f59604b8d044f4e8f9559e"
+            "$ref": "#/components/responses/1eabc3362da12e5a25f6d609c7d7aaad"
           },
           "200": {
-            "$ref": "#/components/responses/1be4a508428516f88645a52750935525"
+            "$ref": "#/components/responses/4336538000e9645d95d453d5de985a54"
           },
           "403": {
-            "$ref": "#/components/responses/4d295e8254b7d86bcbb906e8d72ff089"
+            "$ref": "#/components/responses/7ebb52646be4e121d0417eb99d66d07a"
           }
         },
         "security": [
@@ -1039,22 +1240,22 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/001bbc6a23ef4f22f67ff7fc10397fdc"
+            "$ref": "#/components/responses/d8f00a4fd29c138c736484e2722dc7ca"
           },
           "422": {
-            "$ref": "#/components/responses/d03b5620708ebd0f0eb406de78c18ad9"
+            "$ref": "#/components/responses/f1b43c995db255e77be4f5af263a3ca3"
           },
           "500": {
-            "$ref": "#/components/responses/a6effbeb74610b90a6ff2349ac7bf017"
+            "$ref": "#/components/responses/07c54ea9181a0783f92ef83f996f55d4"
           },
           "200": {
-            "$ref": "#/components/responses/edcd5f870d5df631f945e6c5b29081b5"
+            "$ref": "#/components/responses/43f480c93c3a09b953f729bcb4e5e684"
           },
           "404": {
-            "$ref": "#/components/responses/f1db041fb86c946a1bd46600b2fe90c6"
+            "$ref": "#/components/responses/61f8ff4cbc3644f3ade0465013893535"
           },
           "403": {
-            "$ref": "#/components/responses/8d5ec9c5666caf12a0d83adbd50f0a45"
+            "$ref": "#/components/responses/8f4f0991fd716df61305396af59cbae6"
           }
         },
         "security": [
@@ -1100,19 +1301,19 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/74dffaa3fc56c17604b898ba1710a16e"
+            "$ref": "#/components/responses/7e88cb20d33a044a251d24451e3c96b2"
           },
           "422": {
-            "$ref": "#/components/responses/19da3584b2b08f9f3bfcff587dd36fb4"
+            "$ref": "#/components/responses/8816f8f57fbfe3a9503fa5c8d17fbe3d"
           },
           "500": {
-            "$ref": "#/components/responses/5fe7ee483d2eb4eab50eaa76ff8e3c23"
+            "$ref": "#/components/responses/52846dd86686e38b2a5b6ec695b6f081"
           },
           "200": {
-            "$ref": "#/components/responses/9577404d2036d93e4098da2dac8dfca0"
+            "$ref": "#/components/responses/0b163df8e528d0bfa162f7fe743330d2"
           },
           "403": {
-            "$ref": "#/components/responses/74092237a74758eae67507d38b2b6150"
+            "$ref": "#/components/responses/64c4d2ac12d48d00f3fbbdd8f9890255"
           }
         },
         "security": [
@@ -1132,13 +1333,13 @@
         "operationId": "index_api_v1_user",
         "responses": {
           "401": {
-            "$ref": "#/components/responses/d7ea983c2b7114dafbc5ece8fdb349de"
+            "$ref": "#/components/responses/2f6f666c1f921cea2092a4e2cdb10646"
           },
           "200": {
-            "$ref": "#/components/responses/b1b0947061894af3ac2693080357ff78"
+            "$ref": "#/components/responses/1e8f59f704e4759ae338c92dd4819a77"
           },
           "403": {
-            "$ref": "#/components/responses/7243842bbc7239f61b401be0211c7da3"
+            "$ref": "#/components/responses/9a19bc82b79cf190d0cabcd318f29217"
           }
         },
         "security": [
@@ -1166,19 +1367,19 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/dc59dac221369a13295dc0630839ad0b"
+            "$ref": "#/components/responses/5964160136cd9ef22a06aa730aa3308b"
           },
           "422": {
-            "$ref": "#/components/responses/985057e98c559c72f6f8ce0e22a04963"
+            "$ref": "#/components/responses/ebec2d8be7fbd91acaec9eaf2116a6df"
           },
           "500": {
-            "$ref": "#/components/responses/a7f8f2706a3c3bd6c9fd18ee3b5c5fd1"
+            "$ref": "#/components/responses/2f9fbd274a6ac9a7041ee0f530703438"
           },
           "200": {
-            "$ref": "#/components/responses/bc0c09c773f7e9a6a84af2f0f185b84a"
+            "$ref": "#/components/responses/164191b76f9c469134095f30ff7cdcb7"
           },
           "403": {
-            "$ref": "#/components/responses/77e235fa0f9484d9892b0f7b62300d9e"
+            "$ref": "#/components/responses/9855a0802dd9fd2eabbc7c1ae85ff3d1"
           }
         },
         "security": [
@@ -1203,19 +1404,19 @@
         ],
         "responses": {
           "401": {
-            "$ref": "#/components/responses/f8ba51bef4fe2b62be4b77b19569041f"
+            "$ref": "#/components/responses/dc485c5a76bdd5e6284f8ee7f86b1d4c"
           },
           "422": {
-            "$ref": "#/components/responses/90bd664cda7d8aafbb013ea0ef9a67c3"
+            "$ref": "#/components/responses/968aea8ad33a05b821b9402ac197bc28"
           },
           "500": {
-            "$ref": "#/components/responses/ebba91688f0035a28fc0a58824da4871"
+            "$ref": "#/components/responses/991d12d7a16168471b73fbb5be1489a2"
           },
           "200": {
-            "$ref": "#/components/responses/f76580191ed0f7a8331a7a3993c3139a"
+            "$ref": "#/components/responses/94da330d263381a666c9fdbd7fdc02ec"
           },
           "403": {
-            "$ref": "#/components/responses/321520c765ac8239cc80f64641b9be15"
+            "$ref": "#/components/responses/09b4db8d3d29701cddcc98598b918e37"
           }
         },
         "security": [
@@ -1228,7 +1429,14 @@
   },
   "components": {
     "requestBodies": {
-      "2a9cee832449ef70c5fb86bbcd82a167": {
+      "c783c527179842d0a3b0e98e7d845c2c": {
+        "description": "AiAnswer",
+        "content": {
+          "application/json": {}
+        },
+        "required": true
+      },
+      "b8c0102570d7953dc8a3fd52a6f8d99c": {
         "description": "The payload to send",
         "content": {
           "application/json": {
@@ -1244,7 +1452,7 @@
         },
         "required": true
       },
-      "25b502e07f68baa4cdccd93e13dbfed1": {
+      "d202d1dafa61503f333ac55f6c506d60": {
         "description": "The payload to send",
         "content": {
           "application/json": {
@@ -1271,7 +1479,7 @@
       }
     },
     "responses": {
-      "a93bd9bcae77a5f7559a5bb6a941468e": {
+      "7cd3fa68e01051bf93aec0390b939eb0": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1281,7 +1489,17 @@
           }
         }
       },
-      "b2b709d0cdf0c8955fbcfc89469e1698": {
+      "fc4e14917d6056e1151e4685d46feb3d": {
+        "description": "Insufficient credit",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/a72001d5ef7a2ba164a45c2f0cc82de4"
+            }
+          }
+        }
+      },
+      "5b660a7508aad955c0e8b4b71313d8e8": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1291,7 +1509,177 @@
           }
         }
       },
-      "f277ef6c75cce90c6bd32d9ceb58dcec": {
+      "ee14200090a5ac0628e0e6a89431220e": {
+        "description": "success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/dc095a3e6d04c68dbb2e297d126f7555"
+            }
+          }
+        }
+      },
+      "db8ff4d7a267ed2b9f60e8ec33660513": {
+        "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
+            }
+          }
+        }
+      },
+      "a5039390f153e3051f1c68302b3bc66f": {
+        "description": "success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/85f0a8e99c70c1014a5ddb9ef53a4dea"
+            }
+          }
+        }
+      },
+      "ed16f07f2c3c92114bfe8d04dee9e46e": {
+        "description": "You are not authorized to access this resource. You need to authenticate yourself first.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
+            }
+          }
+        }
+      },
+      "86179ab4877cec4400a519348ad360bf": {
+        "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
+            }
+          }
+        }
+      },
+      "fa97b4b38265f226e802a9b93df23c36": {
+        "description": "success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/8fec79a136f652a80cd4c3bd598a8e8e"
+            }
+          }
+        }
+      },
+      "2fc029568a7964c4d82fd20e724e1714": {
+        "description": "You are not authorized to access this resource. You need to authenticate yourself first.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
+            }
+          }
+        }
+      },
+      "39747843ae4d85bcc62a3eb519b4fb75": {
+        "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
+            }
+          }
+        }
+      },
+      "79384c6259c0121999bbb672e9c70f7a": {
+        "description": "success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/a891f9901160a5d8f70eb54c9a792c97"
+            }
+          }
+        }
+      },
+      "2bbc2dc17d49ba1669fdcf5067b395d6": {
+        "description": "The requested resource could not be found.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
+            }
+          }
+        }
+      },
+      "565d7d0abf7d2a6c3f1a9f3e431b80a6": {
+        "description": "You are not authorized to access this resource. You need to authenticate yourself first.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
+            }
+          }
+        }
+      },
+      "2207ae62b9e73d643c9cef5409af0864": {
+        "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
+            }
+          }
+        }
+      },
+      "1e56f5053d8f2d298b2c766326658030": {
+        "description": "success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/d770795b316a4f46323cbcb7e627381f"
+            }
+          }
+        }
+      },
+      "0c14b92e920a835e869abf212ab1a4e6": {
+        "description": "You are not authorized to access this resource. You need to authenticate yourself first.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
+            }
+          }
+        }
+      },
+      "845e637401e2b928147d1c8a07f770d8": {
+        "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/38bddf8128b086e90de170d98c730f6d"
+            }
+          }
+        }
+      },
+      "21fe7cbbb38ba3bb991592ea3c27cb23": {
+        "description": "Validation errors",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
+            }
+          }
+        }
+      },
+      "ab931729e0c7bfb7ae4dff9ab55e4c2b": {
+        "description": "Validation errors",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/9d665ada07b74ee5119ec08992fb01eb"
+            }
+          }
+        }
+      },
+      "1921c6e8ff96ab9af6cc87660c368187": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1301,7 +1689,7 @@
           }
         }
       },
-      "d1fe516663db5363be38cf0ddabda548": {
+      "fb45bda9114ce5f304834a76f2bebdb8": {
         "description": "success",
         "content": {
           "application/json": {
@@ -1311,7 +1699,7 @@
           }
         }
       },
-      "5c7775c1669a18c0106d3f8621fc53c9": {
+      "84f749b10222d59b3cddb04b7a54057f": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -1321,7 +1709,7 @@
           }
         }
       },
-      "edb64fd04c0bbc7c4b215f1663c9c7f9": {
+      "aaf51aa2c8cc11aec4c6f9577ccf323e": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1331,7 +1719,7 @@
           }
         }
       },
-      "a851b1a892e048689fd77528cd30bb2d": {
+      "7e150ae6af7edef07f40f8c41cb3feee": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1341,7 +1729,7 @@
           }
         }
       },
-      "95e0ea4a1222ad94ca6def972fadd378": {
+      "4d7ca0fb68b74423eac505c70ee6c245": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1351,7 +1739,7 @@
           }
         }
       },
-      "efd306c6f6c894c8e8b53447cc72a66f": {
+      "b78fb1066ad8fde3d69744f530971e16": {
         "description": "success",
         "content": {
           "application/json": {
@@ -1361,7 +1749,7 @@
           }
         }
       },
-      "ebfa25e007419df500a367344181918a": {
+      "d2d536e7d46a7cbc8dec11a2c1426f6d": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -1371,7 +1759,7 @@
           }
         }
       },
-      "abce9eb2ad79ef94dcfce145643c847d": {
+      "0b91fb0dca7363752dd01b7220572aae": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1381,7 +1769,7 @@
           }
         }
       },
-      "b8f1580714e31df136a5137695f73046": {
+      "6116abc0af550b0caf47b7ff39da5a1f": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1391,7 +1779,7 @@
           }
         }
       },
-      "6c4fbbc6b231f159a9ad3eb48ee466ca": {
+      "48c8579aae7c8c42c13f98166197e6cf": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1401,7 +1789,7 @@
           }
         }
       },
-      "2c06124bb57e0e500b9ad60b5ffcb7fb": {
+      "cd4896985a0e782860cd8b0c020caa61": {
         "description": "success",
         "content": {
           "application/json": {
@@ -1411,7 +1799,7 @@
           }
         }
       },
-      "6e1ea9b2b056a7031c122409232f5ce4": {
+      "50841c3f786718a957fe669e3bcb7722": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -1421,7 +1809,7 @@
           }
         }
       },
-      "e5c1d5d9bbbb8cded80f0ca71b53ceb8": {
+      "534dc5d891f75916dd31b14eb0eb4f51": {
         "description": "success",
         "content": {
           "application/json": {
@@ -1431,7 +1819,7 @@
           }
         }
       },
-      "cef01ae2b5a12635b4ad6a185783e1f6": {
+      "566b329670ad207cc5b7c5fd2f2cafcf": {
         "description": "You are not authorized to access this resource. You need to authenticate yourself first.",
         "content": {
           "application/json": {
@@ -1441,7 +1829,7 @@
           }
         }
       },
-      "1297c7df63291f085133dc9ffde51ffb": {
+      "53eb8c86b3342b38e067d096957b5abc": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -1451,7 +1839,7 @@
           }
         }
       },
-      "2b7c700a11e2813a900ea330a7d5f236": {
+      "0fe240d9aa8f9d31bc26e1eaca109403": {
         "description": "success",
         "content": {
           "application/json": {
@@ -1461,7 +1849,7 @@
           }
         }
       },
-      "e2c091d07320d71b8c9f7d85e16f6c71": {
+      "499101b96c8774f78cdd7ecf44ed4971": {
         "description": "You are not authorized to access this resource. You need to authenticate yourself first.",
         "content": {
           "application/json": {
@@ -1471,7 +1859,7 @@
           }
         }
       },
-      "5fd4c96781f70995cca6db55ed5f3db0": {
+      "013c82e5ec8cd81bc39953ed794a9665": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -1481,7 +1869,7 @@
           }
         }
       },
-      "601b134b5b051845782bbb4f20bdc827": {
+      "4d2a945a49d41e2aa1e2f9f0c971f140": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1491,7 +1879,7 @@
           }
         }
       },
-      "1b5a10a7fc85e914d3e43922bf30417d": {
+      "4831f32e497dbd0d1086e0250535f18d": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1501,7 +1889,7 @@
           }
         }
       },
-      "c9024952169602557d888cab880f6393": {
+      "c486f3303c9e4e8a8ead180c286295da": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1511,7 +1899,7 @@
           }
         }
       },
-      "70287a1f30bedb630f347d6eb2d23705": {
+      "03439cf549198b54310e886692760828": {
         "description": "success",
         "content": {
           "application/json": {
@@ -1521,7 +1909,7 @@
           }
         }
       },
-      "81fcba23419fcdb4eaf12ad44ad41854": {
+      "8107f052a810be44ce1811e3509f7888": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -1531,7 +1919,7 @@
           }
         }
       },
-      "f636af961bd02f2dc3ff2abda8bb0611": {
+      "fb0a06aca623fc120c8dc59823d815ad": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1541,7 +1929,7 @@
           }
         }
       },
-      "346f869572ef51d5b9eab3d6a3f46d41": {
+      "104a55c6626eb6f26ff3261c31b4c956": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1551,7 +1939,7 @@
           }
         }
       },
-      "1a8ec6f283e8c19dea1243acb50883ec": {
+      "73a03ef4a3cae1a4cf085e8287415dce": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1561,7 +1949,7 @@
           }
         }
       },
-      "1ff47801ad9b38e458d52522647cb8bb": {
+      "30c9adb7089f7e0303df51b883b84a30": {
         "description": "success",
         "content": {
           "application/json": {
@@ -1571,7 +1959,7 @@
           }
         }
       },
-      "182637d6c52b7a7604429e1eea2b2a5f": {
+      "1c782450c62dcb7ba7c8d5b04ffeebe6": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -1581,7 +1969,7 @@
           }
         }
       },
-      "8914c98e3ba37dc36b16e721f86fe52c": {
+      "ca657ec3aeab52a1091b79d4f3861836": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1591,7 +1979,7 @@
           }
         }
       },
-      "ebfdcc92cdd9f33caf4161182a99ba88": {
+      "5a510a61b07d2872d60538e875f7b5e8": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1601,7 +1989,7 @@
           }
         }
       },
-      "a90422450e9104cc43fa412db111509f": {
+      "ec3318d55df217b833779f6fd489b30d": {
         "description": "success",
         "content": {
           "application/json": {
@@ -1611,7 +1999,7 @@
           }
         }
       },
-      "db6c00b0fc58e54768d48e8b79e7a564": {
+      "2684a97a1a85cd4c06d064c09fd51d3e": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -1621,7 +2009,7 @@
           }
         }
       },
-      "10954527fd00d535ee51b044b1628226": {
+      "a99ea9405fa4695b95830bcb142f574e": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1631,7 +2019,7 @@
           }
         }
       },
-      "4e720a783dd548a5476dae6d1b5a23c0": {
+      "3cc5e10e820522451110a2da7c1dbc52": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1641,7 +2029,7 @@
           }
         }
       },
-      "bfd0467171c7297342c04525fd343fcb": {
+      "282bb10afde5078068c02a71a409eac8": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1651,7 +2039,7 @@
           }
         }
       },
-      "1dc114ef7bd795b1d27e6f3ff8550ba2": {
+      "c36f08e1f2c8bf1dc42a4b34c48adb9c": {
         "description": "success",
         "content": {
           "application/json": {
@@ -1661,7 +2049,7 @@
           }
         }
       },
-      "2de60c38c0f7bb15e8731eb565905a4f": {
+      "b845bed7db01eadaf56c117c186fe3fc": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -1671,7 +2059,7 @@
           }
         }
       },
-      "80a31a5a3e34962463246cc512e9d39d": {
+      "8dadbaef6640a08bb06a1af466009cc8": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1681,7 +2069,7 @@
           }
         }
       },
-      "1d83ec9b88868e76a60347c991ec676c": {
+      "e8f194278b7a1c0360201136c8088ecc": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1691,7 +2079,7 @@
           }
         }
       },
-      "71a0353bb216e1277e21a91e9c0ccb84": {
+      "01a4e7e67dbeee4b6d9d0013074e6b79": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1701,7 +2089,7 @@
           }
         }
       },
-      "76dc73c48c2cb3fbffe803b0038a1669": {
+      "22f33f4db8f5c7d1ace62d01d552d744": {
         "description": "success",
         "content": {
           "application/json": {
@@ -1711,7 +2099,7 @@
           }
         }
       },
-      "17ec37cd0cc746907a9b78429d0b906d": {
+      "b1f922057db12d5c893cccb09facf958": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -1721,7 +2109,7 @@
           }
         }
       },
-      "27536bb3d6b0b8c87b58453f01b388f5": {
+      "d7da1e684319692ff7a9689119f0c84f": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1731,7 +2119,7 @@
           }
         }
       },
-      "a897657704b40912a117c26f28ea7ec4": {
+      "ac4352a99b50818c02411624f03ec59a": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1741,7 +2129,7 @@
           }
         }
       },
-      "dcc761eb969c543eaa38d88687c5ee44": {
+      "95b536272529b516c23ada76e7f5ac27": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1751,7 +2139,7 @@
           }
         }
       },
-      "d448101ad4bfddf262149c08dbae2f92": {
+      "ba343081f28fa872ef8431a84828cb38": {
         "description": "success",
         "content": {
           "application/json": {
@@ -1761,7 +2149,7 @@
           }
         }
       },
-      "cf9bb8faa708469732aed995ad48dc36": {
+      "9aebe4b3216bb1e4f8f0b8e22f37dfef": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -1771,7 +2159,7 @@
           }
         }
       },
-      "a15653ba9595b7d6f07fc10346f68d13": {
+      "c549158334beede2166f22bb3b043ac2": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1781,7 +2169,7 @@
           }
         }
       },
-      "77a349bdb09a071f00dd90cdab8677d1": {
+      "039e217effe19f1caf64eedef9eb7827": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1791,7 +2179,7 @@
           }
         }
       },
-      "3e36bc45a8d4307237f3e3b89d2b78e3": {
+      "b1c673856552ca5ee16cd88b6df374bd": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1801,7 +2189,7 @@
           }
         }
       },
-      "f6d75ca89e68c715c78d3a999a5495e2": {
+      "58177e87f0dd914c8fabfa6de2dbca59": {
         "description": "success",
         "content": {
           "application/json": {
@@ -1811,7 +2199,7 @@
           }
         }
       },
-      "b50eed768b217c6b44a47363c7e64a98": {
+      "0ba85018ea875d154e05b73747dc0efb": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -1821,7 +2209,7 @@
           }
         }
       },
-      "340322023d81356e3c7545b87176f461": {
+      "d95c80af902c2c020a009860138673d3": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1831,7 +2219,7 @@
           }
         }
       },
-      "8ef6eff228d7d7134f7805bd169425ce": {
+      "94634a792e314adf31356e5affe61d0d": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1841,7 +2229,7 @@
           }
         }
       },
-      "86b612f55c9b1aa6568977905b28dfa6": {
+      "355618f0e6532f8b19836f9bbb54ad7e": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1851,7 +2239,7 @@
           }
         }
       },
-      "1cb4ee678fb295a69d1b8b838d9083e8": {
+      "69e8a27fd499a9c983aaf069462d134b": {
         "description": "success",
         "content": {
           "application/json": {
@@ -1861,7 +2249,7 @@
           }
         }
       },
-      "4b196be8ee9c95dd2ae7ec36d683ff51": {
+      "9370e62e67cc85c0e24bae2176513496": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -1871,7 +2259,7 @@
           }
         }
       },
-      "c3521cb53ce53e23cc221f5a9cbb3e23": {
+      "628b860c1a773435f9183d2d0d6f6944": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1881,7 +2269,7 @@
           }
         }
       },
-      "cd7c702f7fc6d1f783085f6884a8db76": {
+      "08857840e71409bd2d38bbdb6beda8a4": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1891,7 +2279,7 @@
           }
         }
       },
-      "38b29d3c5ad25ee68c3e24f7f005b9d1": {
+      "d08e1ff7811d817e45b43451200a310a": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1901,7 +2289,7 @@
           }
         }
       },
-      "5f3cfa6a41aafc1c902350360e7bafdf": {
+      "002e7dac61ba571754e446673dbddbdc": {
         "description": "success",
         "content": {
           "application/json": {
@@ -1911,7 +2299,7 @@
           }
         }
       },
-      "ca5f44bab43cecb2153f26ece15ea854": {
+      "65b9d5cd2eb8fe757d933d05f99b014c": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -1921,7 +2309,7 @@
           }
         }
       },
-      "81b2d2c9ecae25e660d4f7040606b79b": {
+      "ce31b2b6178620006fc337aa5f22581f": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1931,7 +2319,7 @@
           }
         }
       },
-      "07889aa273dd222ebd34f5bf8927f5ac": {
+      "544c2f095ab903367951b17ee1e0fcf3": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1941,7 +2329,7 @@
           }
         }
       },
-      "b921bf4c2a156f4527ffc66918c11511": {
+      "44acb18eebeda7a64b753e41ac86993d": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1951,7 +2339,7 @@
           }
         }
       },
-      "ccf8543162752a2dc7461de21dff022d": {
+      "6cd8332cfe35b7b47071e43e9339ffd2": {
         "description": "success",
         "content": {
           "application/json": {
@@ -1961,7 +2349,7 @@
           }
         }
       },
-      "531cf9dccfdf6f87c964716d1f39e502": {
+      "07f60b6446f961f65b879f0a2b15d69e": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -1971,7 +2359,7 @@
           }
         }
       },
-      "12f453dc0aa2ed1e644d4a9f1082d16f": {
+      "054f9b788161fe1c490e1f13ac3f4c13": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1981,7 +2369,7 @@
           }
         }
       },
-      "995d645c53d7fa9fc406248fdcad636d": {
+      "b33e63a5257ac891c3d03c42632e4494": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -1991,7 +2379,7 @@
           }
         }
       },
-      "30220f5bd1dcee0fc1dd192ca4e13728": {
+      "a5f653be7294772d2d1f2c6797ed73bf": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2001,7 +2389,7 @@
           }
         }
       },
-      "0fc18e983c9caf64d19ed8fe0f1243d2": {
+      "1db17fa25fefe2240a6cc242551c5e56": {
         "description": "success",
         "content": {
           "application/json": {
@@ -2011,7 +2399,7 @@
           }
         }
       },
-      "3784359ac24ddd6b252b2dd93beea043": {
+      "3fcc65170943ee9d9de072fa377a3d90": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -2021,7 +2409,7 @@
           }
         }
       },
-      "5d979bd0c053048205bc4ba3e329617a": {
+      "d33e363d221c31d14862b458242ede8b": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2031,7 +2419,7 @@
           }
         }
       },
-      "f97943f518b86600ce2e090e6b1dba49": {
+      "e495e5af4485416b74a12146176d033a": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2041,7 +2429,7 @@
           }
         }
       },
-      "44429666078d81208c5448e3aebaab18": {
+      "d78bb064259936b9b42f793a601b093a": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2051,7 +2439,7 @@
           }
         }
       },
-      "b3119ac2bb1e1fed563d3f23c7143efd": {
+      "3983490cd06c547ff4d87a2fceab229a": {
         "description": "success",
         "content": {
           "application/json": {
@@ -2061,7 +2449,7 @@
           }
         }
       },
-      "f21c5e28ca2e73e87a6ed9c07bd45c8f": {
+      "1154805457a2d4bbb419464b776948dd": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -2071,7 +2459,7 @@
           }
         }
       },
-      "b4d1fb108bbe86ad024967a4286ed69a": {
+      "62382c9ac582f6f26eea6bb5c606d33e": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2081,7 +2469,7 @@
           }
         }
       },
-      "5c152b1740f5af7e9e4ff29155c98455": {
+      "44896dd8aa16259c1e2302ae98a33a86": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2091,7 +2479,7 @@
           }
         }
       },
-      "0466dcc24aed86fecaf900ad7818cb21": {
+      "398d3241ee88b925ebd53564d342bdf2": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2101,7 +2489,7 @@
           }
         }
       },
-      "6d5dcf2d0102b3a70556ed2992fc3009": {
+      "92a76983c613671badc2481d4180fe32": {
         "description": "success",
         "content": {
           "application/json": {
@@ -2111,7 +2499,7 @@
           }
         }
       },
-      "7ff117d41b48f41d426e2b918a0bc095": {
+      "2385917ac346989d1b1a09496823e03e": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -2121,7 +2509,7 @@
           }
         }
       },
-      "469b4283d622ca28342f134d9e30ce16": {
+      "726c99b03bc80215051885212ddf2338": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2131,7 +2519,7 @@
           }
         }
       },
-      "d5f07c2c218705d45990f69b7f652575": {
+      "750749ffa2b68ba0179662515b47c539": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2141,7 +2529,7 @@
           }
         }
       },
-      "fb69dd99dcbbfd363b4942d515fc02cd": {
+      "5d12b2eb55a4a795ddbbf18a9a441cf9": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2151,7 +2539,7 @@
           }
         }
       },
-      "386b114e50575f6a89cedd906eca77c7": {
+      "cb60833a1f277c2b57343dd2072fd0f5": {
         "description": "success",
         "content": {
           "application/json": {
@@ -2161,7 +2549,7 @@
           }
         }
       },
-      "9117c7513ebb1d691ab98dee833314c3": {
+      "2ae18dc27daefe4c3072e8d7a947126f": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -2171,7 +2559,7 @@
           }
         }
       },
-      "858d93ea102dd94f06fd66dccf068435": {
+      "71fcfd4352811c65b4427e7396042d3f": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2181,7 +2569,7 @@
           }
         }
       },
-      "7ca6cb1bbcde3902cbd8dffc8b9f7603": {
+      "684faffd00203dde050485fad3cc766b": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2191,7 +2579,7 @@
           }
         }
       },
-      "313c4a75961402925c6c846951f27455": {
+      "879d5f365bca1d32d8a290420cf31933": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2201,7 +2589,7 @@
           }
         }
       },
-      "e78c689a29d7b4d2125c6f0f7c48b496": {
+      "0122b4354831ff839d35220e9767a548": {
         "description": "success",
         "content": {
           "application/json": {
@@ -2211,7 +2599,7 @@
           }
         }
       },
-      "1f6e85226f00744d0169a211bf2426da": {
+      "c0a97496944403736866d141c9014ba8": {
         "description": "The requested resource could not be found.",
         "content": {
           "application/json": {
@@ -2221,7 +2609,7 @@
           }
         }
       },
-      "a4984a9c7fe1ddad89c17711ae4139c6": {
+      "f63de5ded741f14c5a7ff2b22f6656f1": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -2231,7 +2619,7 @@
           }
         }
       },
-      "63d2f91e81d4fd813ddbd268998b3d9d": {
+      "8fbddbb63785596a7949ca673f60d138": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2241,7 +2629,7 @@
           }
         }
       },
-      "4b9758a1b172ab982f7255c601b92987": {
+      "2ef61ed1029580dd7948d5bbf91f8e1f": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2251,7 +2639,7 @@
           }
         }
       },
-      "98d9722b482fe1008bcba4f3c84c7d92": {
+      "2872ad8ddb7120d9a4a91de2e6c8ec02": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2261,7 +2649,7 @@
           }
         }
       },
-      "da5e4dca381dd908bf5d3eb45bba2371": {
+      "c6ede7d65a71363e81d05950483910f7": {
         "description": "success",
         "content": {
           "application/json": {
@@ -2271,7 +2659,7 @@
           }
         }
       },
-      "4b9c9e85e6d1166513eb18da91c18f2a": {
+      "ae12f7e2ae3dd8a141f480a6a17500b2": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -2281,7 +2669,7 @@
           }
         }
       },
-      "949fb8c908b31461a531eed582628f5d": {
+      "3e982a295ee68cd964a4ae803349c94f": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2291,7 +2679,7 @@
           }
         }
       },
-      "e8f9c55a5c8728af9020fba40b5e1b0c": {
+      "99e8bd66bde913900b5e2a305f1baa8a": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2301,7 +2689,7 @@
           }
         }
       },
-      "070fc587e914577ffbcde70794adaca3": {
+      "3411f9b4b0efbec6079e439f6d78107d": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2311,7 +2699,7 @@
           }
         }
       },
-      "a54b5cf7dd56831c13dfb9f0da216736": {
+      "b144e36789da3b1ca62844bbdb59350b": {
         "description": "success",
         "content": {
           "application/json": {
@@ -2321,7 +2709,7 @@
           }
         }
       },
-      "b2d16397c42fa68b3c438d43a9b53fda": {
+      "cf27fc786ad20675c59bfd4cbb7fc222": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -2331,7 +2719,7 @@
           }
         }
       },
-      "6f16d3ca17889025eb7f47ec160eda62": {
+      "f603c459d3d2296a356ec64161bacf65": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2341,7 +2729,7 @@
           }
         }
       },
-      "47fa0ae67e2cffe43786911fdc18e3ff": {
+      "846155e38b0cd728c76c9007c01f2e9c": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2351,7 +2739,7 @@
           }
         }
       },
-      "570222dc37f59604b8d044f4e8f9559e": {
+      "1eabc3362da12e5a25f6d609c7d7aaad": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2361,7 +2749,7 @@
           }
         }
       },
-      "1be4a508428516f88645a52750935525": {
+      "4336538000e9645d95d453d5de985a54": {
         "description": "success",
         "content": {
           "application/json": {
@@ -2371,7 +2759,7 @@
           }
         }
       },
-      "4d295e8254b7d86bcbb906e8d72ff089": {
+      "7ebb52646be4e121d0417eb99d66d07a": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -2381,7 +2769,7 @@
           }
         }
       },
-      "001bbc6a23ef4f22f67ff7fc10397fdc": {
+      "d8f00a4fd29c138c736484e2722dc7ca": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2391,7 +2779,7 @@
           }
         }
       },
-      "d03b5620708ebd0f0eb406de78c18ad9": {
+      "f1b43c995db255e77be4f5af263a3ca3": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2401,7 +2789,7 @@
           }
         }
       },
-      "a6effbeb74610b90a6ff2349ac7bf017": {
+      "07c54ea9181a0783f92ef83f996f55d4": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2411,7 +2799,7 @@
           }
         }
       },
-      "edcd5f870d5df631f945e6c5b29081b5": {
+      "43f480c93c3a09b953f729bcb4e5e684": {
         "description": "success",
         "content": {
           "application/json": {
@@ -2421,7 +2809,7 @@
           }
         }
       },
-      "f1db041fb86c946a1bd46600b2fe90c6": {
+      "61f8ff4cbc3644f3ade0465013893535": {
         "description": "The requested resource could not be found.",
         "content": {
           "application/json": {
@@ -2431,7 +2819,7 @@
           }
         }
       },
-      "8d5ec9c5666caf12a0d83adbd50f0a45": {
+      "8f4f0991fd716df61305396af59cbae6": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -2441,7 +2829,7 @@
           }
         }
       },
-      "74dffaa3fc56c17604b898ba1710a16e": {
+      "7e88cb20d33a044a251d24451e3c96b2": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2451,7 +2839,7 @@
           }
         }
       },
-      "19da3584b2b08f9f3bfcff587dd36fb4": {
+      "8816f8f57fbfe3a9503fa5c8d17fbe3d": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2461,7 +2849,7 @@
           }
         }
       },
-      "5fe7ee483d2eb4eab50eaa76ff8e3c23": {
+      "52846dd86686e38b2a5b6ec695b6f081": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2471,7 +2859,7 @@
           }
         }
       },
-      "9577404d2036d93e4098da2dac8dfca0": {
+      "0b163df8e528d0bfa162f7fe743330d2": {
         "description": "success",
         "content": {
           "application/json": {
@@ -2481,7 +2869,7 @@
           }
         }
       },
-      "74092237a74758eae67507d38b2b6150": {
+      "64c4d2ac12d48d00f3fbbdd8f9890255": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -2491,7 +2879,7 @@
           }
         }
       },
-      "d7ea983c2b7114dafbc5ece8fdb349de": {
+      "2f6f666c1f921cea2092a4e2cdb10646": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2501,7 +2889,7 @@
           }
         }
       },
-      "b1b0947061894af3ac2693080357ff78": {
+      "1e8f59f704e4759ae338c92dd4819a77": {
         "description": "success",
         "content": {
           "application/json": {
@@ -2511,7 +2899,7 @@
           }
         }
       },
-      "7243842bbc7239f61b401be0211c7da3": {
+      "9a19bc82b79cf190d0cabcd318f29217": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -2521,7 +2909,7 @@
           }
         }
       },
-      "dc59dac221369a13295dc0630839ad0b": {
+      "5964160136cd9ef22a06aa730aa3308b": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2531,7 +2919,7 @@
           }
         }
       },
-      "985057e98c559c72f6f8ce0e22a04963": {
+      "ebec2d8be7fbd91acaec9eaf2116a6df": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2541,7 +2929,7 @@
           }
         }
       },
-      "a7f8f2706a3c3bd6c9fd18ee3b5c5fd1": {
+      "2f9fbd274a6ac9a7041ee0f530703438": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2551,7 +2939,7 @@
           }
         }
       },
-      "bc0c09c773f7e9a6a84af2f0f185b84a": {
+      "164191b76f9c469134095f30ff7cdcb7": {
         "description": "success",
         "content": {
           "application/json": {
@@ -2561,7 +2949,7 @@
           }
         }
       },
-      "77e235fa0f9484d9892b0f7b62300d9e": {
+      "9855a0802dd9fd2eabbc7c1ae85ff3d1": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -2571,7 +2959,7 @@
           }
         }
       },
-      "f8ba51bef4fe2b62be4b77b19569041f": {
+      "dc485c5a76bdd5e6284f8ee7f86b1d4c": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2581,7 +2969,7 @@
           }
         }
       },
-      "90bd664cda7d8aafbb013ea0ef9a67c3": {
+      "968aea8ad33a05b821b9402ac197bc28": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2591,7 +2979,7 @@
           }
         }
       },
-      "ebba91688f0035a28fc0a58824da4871": {
+      "991d12d7a16168471b73fbb5be1489a2": {
         "description": "Validation errors",
         "content": {
           "application/json": {
@@ -2601,7 +2989,7 @@
           }
         }
       },
-      "f76580191ed0f7a8331a7a3993c3139a": {
+      "94da330d263381a666c9fdbd7fdc02ec": {
         "description": "success",
         "content": {
           "application/json": {
@@ -2611,7 +2999,7 @@
           }
         }
       },
-      "321520c765ac8239cc80f64641b9be15": {
+      "09b4db8d3d29701cddcc98598b918e37": {
         "description": "You are not allowed to access this resource. You do not have the necessary permissions.",
         "content": {
           "application/json": {
@@ -2628,6 +3016,198 @@
         "properties": {
           "error": {
             "type": "string"
+          }
+        }
+      },
+      "a72001d5ef7a2ba164a45c2f0cc82de4": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string"
+          },
+          "credits_required": {
+            "type": "float"
+          }
+        }
+      },
+      "dc095a3e6d04c68dbb2e297d126f7555": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "uuid": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "credits_charged": {
+                "type": "float"
+              },
+              "tasks": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "prompt": {
+                      "type": "string"
+                    },
+                    "engine": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "samples": {
+                      "type": "array",
+                      "items": {
+                        "type": "hash"
+                      }
+                    },
+                    "distribution": {
+                      "type": "hash"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "38bddf8128b086e90de170d98c730f6d": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "success"
+        ]
+      },
+      "85f0a8e99c70c1014a5ddb9ef53a4dea": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "uuid": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "credits_charged": {
+                "type": "float"
+              },
+              "tasks_total": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      },
+      "8fec79a136f652a80cd4c3bd598a8e8e": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "capture_id": {
+                "type": "integer"
+              },
+              "engine": {
+                "type": "string"
+              },
+              "raw": {
+                "type": "hash"
+              }
+            }
+          }
+        }
+      },
+      "a891f9901160a5d8f70eb54c9a792c97": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "uuid": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "tasks": {
+                "type": "array",
+                "items": {
+                  "type": "hash"
+                }
+              }
+            }
+          }
+        }
+      },
+      "d770795b316a4f46323cbcb7e627381f": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "engines": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "engine": {
+                      "type": "string"
+                    },
+                    "surface": {
+                      "type": "string"
+                    },
+                    "logged_in": {
+                      "type": "boolean"
+                    },
+                    "credits_per_sample": {
+                      "type": "float"
+                    },
+                    "health": {
+                      "type": "hash"
+                    },
+                    "versions_24h": {
+                      "type": "array",
+                      "items": {
+                        "type": "hash"
+                      }
+                    }
+                  }
+                }
+              },
+              "planned": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "engine": {
+                      "type": "string"
+                    },
+                    "note": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -2695,20 +3275,6 @@
             }
           }
         }
-      },
-      "38bddf8128b086e90de170d98c730f6d": {
-        "type": "object",
-        "properties": {
-          "success": {
-            "type": "boolean"
-          },
-          "message": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "success"
-        ]
       },
       "bb31fe994ce54e9391daffa7dea5b924": {
         "type": "object",
@@ -4441,6 +5007,191 @@
       }
     },
     "parameters": {
+      "cb64ccc2dbbfdbe0f43b1db31f5c240c": {
+        "name": "prompt",
+        "in": "query",
+        "description": "The prompt to ask (1-4000 characters).",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "style": "form"
+      },
+      "d5b698683200e71471fbfa1420905ff5": {
+        "name": "engines",
+        "in": "query",
+        "description": "Comma-separated engines: google_aio, google_ai_mode, chatgpt, gemini, copilot_search. Default: all of them. `engine` is accepted for one engine.",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "style": "form"
+      },
+      "0b8219acb80c638a4f139f388c36729c": {
+        "name": "samples",
+        "in": "query",
+        "description": "Independent captures per engine (1-10, default 1). Each is billed; `distribution` reports rates across them.",
+        "required": false,
+        "schema": {
+          "type": "integer"
+        },
+        "style": "form"
+      },
+      "01744852f75466c254a711bb7dc826ea": {
+        "name": "track_brands",
+        "in": "query",
+        "description": "Comma-separated brands to match in every sample. Aliases with \"|\": \"Asana|asana.com\".",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "style": "form"
+      },
+      "da0345ae7008d412af9ee2c3d647c21f": {
+        "name": "track_domains",
+        "in": "query",
+        "description": "Comma-separated domains to match against citations (subdomains included).",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "style": "form"
+      },
+      "3d4a11ea442682271229c4fdfdd0f435": {
+        "name": "country",
+        "in": "query",
+        "description": "Country for Google engines (default us).",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "style": "form"
+      },
+      "b7d9338a7fcad4f209f6f2ba4b9e81ec": {
+        "name": "location",
+        "in": "query",
+        "description": "\"lat,lng\" or a place name / postal code, as on /serp. Applied as the browser's geolocation.",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "style": "form"
+      },
+      "6790fb343b627cd4831de938bf628de9": {
+        "name": "timezone",
+        "in": "query",
+        "description": "IANA time zone with location.",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "style": "form"
+      },
+      "f7db4920b7aa7ea945d4112aa5bc0b70": {
+        "name": "device",
+        "in": "query",
+        "description": "desktop (default) or mobile.",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "style": "form"
+      },
+      "832353e18dc5525ad638508a8dd0454d": {
+        "name": "include",
+        "in": "query",
+        "description": "Comma-separated extras kept 7 days: raw_stream, html, screenshot.",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "style": "form"
+      },
+      "936b828a3e28d2f940115dbefcf74236": {
+        "name": "wait",
+        "in": "query",
+        "description": "Wait up to `timeout` seconds and return results inline when done.",
+        "required": false,
+        "schema": {
+          "type": "boolean"
+        },
+        "style": "form"
+      },
+      "aabcc6d3ac3ecd32d7ff68f78bc7904f": {
+        "name": "timeout",
+        "in": "query",
+        "description": "Seconds to wait with wait=true (1-120, default 60).",
+        "required": false,
+        "schema": {
+          "type": "integer"
+        },
+        "style": "form"
+      },
+      "a0679b63f7a8d007e1e792142560e901": {
+        "name": "webhook_url",
+        "in": "query",
+        "description": "HTTPS URL POSTed {uuid, status, url} when the request finishes.",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "style": "form"
+      },
+      "1a5bd9f832bc6a3df9ca1d907a60b2f4": {
+        "name": "tasks",
+        "in": "body",
+        "description": "Up to 1000 prompt x engine tasks in total.",
+        "required": true,
+        "schema": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "prompt": {
+                "type": "string"
+              },
+              "engines": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "samples": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      },
+      "04a05bb4d94f688c8d7d1ad6981b8653": {
+        "name": "idempotency_key",
+        "in": "body",
+        "description": "Repeating a key returns the original request instead of starting (and billing) a new one.",
+        "required": false,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "0a592095dbe0b94b78a8b31ff2d4e4dd": {
+        "name": "id",
+        "in": "path",
+        "description": "capture_id from a sample.",
+        "required": true,
+        "schema": {
+          "type": "integer"
+        },
+        "style": "simple"
+      },
+      "6581caad72c682e505a884795a80eb27": {
+        "name": "uuid",
+        "in": "path",
+        "description": "The uuid returned by /ai_answer or /ai_answer/batch.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "style": "simple"
+      },
       "ec5996e4a159a4901c7d8af4f1bc5497": {
         "name": "domain",
         "in": "query",
